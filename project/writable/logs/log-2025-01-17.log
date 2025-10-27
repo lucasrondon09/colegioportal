@@ -1,0 +1,77 @@
+CRITICAL - 2025-01-17 09:52:45 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5333): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(595): App\Controllers\Admin\monta_pdf_boletim_turma->render('362', '1218')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('362', '1218')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-17 14:36:06 --> Attempt to read property "id_grau" on array
+in APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php on line 134.
+ 1 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_grau" on array', 'APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php', 134)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-17 23:02:17 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for colegioportal.mysql.dbaas.com.br failed: Name or service not known in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:170
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', '/home/storage/4...', 170)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(170): mysqli->real_connect('colegioportal.m...', 'colegioportal', Object(SensitiveParameterValue), 'colegioportal', 3306, '', 0)
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(525): CodeIgniter\Model->doFind(true, 25)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Site/Home.php(72): CodeIgniter\BaseModel->find(25)
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Site\Home->nossaProposta()
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(72): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for colegioportal.mysql.dbaas.com.br failed: Name or service not known in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:170
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(170): mysqli->real_connect('colegioportal.m...', 'colegioportal', Object(SensitiveParameterValue), 'colegioportal', 3306, '', 0)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(525): CodeIgniter\Model->doFind(true, 25)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Site/Home.php(72): CodeIgniter\BaseModel->find(25)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Site\Home->nossaProposta()
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(72): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for ****.mysql.dbaas.com.br failed: Name or service not known in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(525): CodeIgniter\Model->doFind(true, 25)
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Site/Home.php(72): CodeIgniter\BaseModel->find(25)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Site\Home->nossaProposta()
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(72): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-01-17 23:02:17 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for ****.mysql.dbaas.com.br failed: Name or service not known
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `paginas`
+WHERE `paginas`.`deleted_at` IS NULL
+AND `paginas`.`id` = :paginas.id:', [...], false)
+ 3 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(525): CodeIgniter\Model->doFind(true, 25)
+ 5 APPPATH/Controllers/Site/Home.php(72): CodeIgniter\BaseModel->find(25)
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->nossaProposta()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,126 @@
+CRITICAL - 2025-10-16 14:54:43 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Admin\SI_Contrato.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->create('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-16 14:55:01 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Admin\SI_Contrato.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->create('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-16 14:55:02 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Admin\SI_Contrato.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->create('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-16 14:55:31 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Admin\SI_Contrato.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->create('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-16 14:56:41 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Admin\SI_Contrato.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->create('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-16 15:00:24 --> Attempt to modify property "fields" on array
+in APPPATH\Controllers\Admin\SI_Contrato.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->create('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-16 15:55:16 --> mysqli_sql_exception: Unknown column 'si_turma.ano_letivo' in 'order clause' in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_cont...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_cont...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_cont...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_cont...', Array, false)
+#4 C:\wamp64\www\portal\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\portal\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_Contrato.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->index()
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+#9 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-16 15:55:16 --> Unknown column 'si_turma.ano_letivo' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`, `si_pai`.`rm_resp_financeiro_nome` as `responsavel_nome`
+FROM `si_contrato`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+ORDER BY `si_turma`.`ano_letivo` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`, `si_pai`.`rm_resp_financeiro_nome` as `responsavel_nome`
+FROM `si_contrato`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+ORDER BY `si_turma`.`ano_letivo` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`, `si_pai`.`rm_resp_financeiro_nome` as `responsavel_nome`
+FROM `si_contrato`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+ORDER BY `si_turma`.`ano_letivo` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`, `si_pai`.`rm_resp_financeiro_nome` as `responsavel_nome`
+FROM `si_contrato`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+ORDER BY `si_turma`.`ano_letivo` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\SI_Contrato.php(43): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-16 21:23:58 --> mysqli_sql_exception: Unknown column 'si_aluno.rm_resp_financeiro_nome' in 'field list' in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_cont...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_cont...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_cont...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_cont...', Array, false)
+#4 C:\wamp64\www\portal\project\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\portal\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_Contrato.php(184): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->lancamentos('21')
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+#9 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-16 21:23:58 --> Unknown column 'si_aluno.rm_resp_financeiro_nome' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_aluno`.`rm_resp_financeiro_nome` as `responsavel_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = \'21\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_aluno`.`rm_resp_financeiro_nome` as `responsavel_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = \'21\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_aluno`.`rm_resp_financeiro_nome` as `responsavel_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = \'21\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `aluno_nome`, `si_aluno`.`rm_resp_financeiro_nome` as `responsavel_nome`, `si_turma`.`nome` as `turma_nome`, `si_turma`.`ano` as `turma_ano`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = :si_contrato.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(525): CodeIgniter\Model->doFind(true, '21')
+ 7 APPPATH\Controllers\Admin\SI_Contrato.php(184): CodeIgniter\BaseModel->find('21')
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->lancamentos('21')
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()

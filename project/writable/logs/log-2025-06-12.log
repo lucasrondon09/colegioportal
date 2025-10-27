@@ -1,0 +1,51 @@
+CRITICAL - 2025-06-12 09:36:25 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5337): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(599): App\Controllers\Admin\monta_pdf_boletim_turma->render('390', '1151')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('390', '1151')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-12 09:42:13 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5337): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(599): App\Controllers\Admin\monta_pdf_boletim_turma->render('401', '1152')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('401', '1152')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-12 09:43:25 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5337): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(599): App\Controllers\Admin\monta_pdf_boletim_turma->render('402', '1153')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('402', '1153')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-12 09:45:37 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5337): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(599): App\Controllers\Admin\monta_pdf_boletim_turma->render('401', '1152')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('401', '1152')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-12 10:14:57 --> Undefined variable $sent
+in APPPATH/Controllers/Site/Contatos.php on line 70.
+ 1 APPPATH/Controllers/Site/Contatos.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sent', 'APPPATH/Controllers/Site/Contatos.php', 70)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->sendMail()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

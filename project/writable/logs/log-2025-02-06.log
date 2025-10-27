@@ -1,0 +1,14 @@
+CRITICAL - 2025-02-06 13:17:39 --> Undefined variable $sistema
+in APPPATH/Controllers/Admin/Auth.php on line 116.
+ 1 APPPATH/Controllers/Admin/Auth.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sistema', 'APPPATH/Controllers/Admin/Auth.php', 116)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-06 15:13:43 --> Attempt to read property "id_grau" on array
+in APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php on line 134.
+ 1 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_grau" on array', 'APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php', 134)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

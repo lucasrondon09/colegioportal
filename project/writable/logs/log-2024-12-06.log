@@ -1,0 +1,14 @@
+CRITICAL - 2024-12-06 07:56:52 --> Undefined variable $sent
+in APPPATH/Controllers/Site/Contatos.php on line 70.
+ 1 APPPATH/Controllers/Site/Contatos.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sent', 'APPPATH/Controllers/Site/Contatos.php', 70)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->sendMail()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 19:00:37 --> Attempt to read property "id_grau" on array
+in APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php on line 134.
+ 1 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_grau" on array', 'APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php', 134)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

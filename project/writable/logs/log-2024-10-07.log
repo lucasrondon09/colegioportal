@@ -1,0 +1,189 @@
+CRITICAL - 2024-10-07 08:28:51 --> Undefined constant "CMSHOSPEDAGEM"
+in APPPATH/Views/admin/home/index.php on line 169.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('admin/home/index.php', [], true)
+ 4 APPPATH/Controllers/Admin/Home.php(65): view('admin/home/index.php', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:28:56 --> Undefined constant "CMSHOSPEDAGEM"
+in APPPATH/Views/admin/home/index.php on line 169.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('admin/home/index.php', [], true)
+ 4 APPPATH/Controllers/Admin/Home.php(65): view('admin/home/index.php', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:29:45 --> Undefined constant "CMSHOSPEDAGEM"
+in APPPATH/Views/admin/home/index.php on line 169.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('admin/home/index.php', [], true)
+ 4 APPPATH/Controllers/Admin/Home.php(65): view('admin/home/index.php', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:31:07 --> Undefined constant "CMSHOSPEDAGEM"
+in APPPATH/Views/admin/home/index.php on line 169.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('admin/home/index.php', [], true)
+ 4 APPPATH/Controllers/Admin/Home.php(65): view('admin/home/index.php', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:31:23 --> Creation of dynamic property App\Controllers\Admin\Galeria::$model is deprecated
+in APPPATH/Controllers/Admin/Galeria.php on line 21.
+ 1 APPPATH/Controllers/Admin/Galeria.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Admin\\Galeria::$model is deprecated', 'APPPATH/Controllers/Admin/Galeria.php', 21)
+ 2 SYSTEMPATH/CodeIgniter.php(887): App\Controllers\Admin\Galeria->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:35:11 --> getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1236.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 843.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1236.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 843)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(843): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1236.jpeg')
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:35:48 --> getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1215.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 843.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1215.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 843)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(843): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1215.jpeg')
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '2', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:48:27 --> Function utf8_decode() is deprecated
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 2740.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(2740): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function utf8_decode() is deprecated', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 2740)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(340): App\Controllers\Admin\relatorio_aluno_matricula_pdf->gerar_lista('2024', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->relatorio_aluno_matricula_montar()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:49:29 --> getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1251.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 843.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1251.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 843)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(843): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1251.jpeg')
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('350', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:51:36 --> Function utf8_decode() is deprecated
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 2740.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(2740): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function utf8_decode() is deprecated', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 2740)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(340): App\Controllers\Admin\relatorio_aluno_matricula_pdf->gerar_lista('2024', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->relatorio_aluno_matricula_montar()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:57:49 --> syntax error, unexpected token ","
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 2544.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Admin/SI_Relatorios.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Relatorios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Relatorios')
+ 4 SYSTEMPATH/CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Relatorios', true)
+ 5 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 08:58:02 --> syntax error, unexpected token ","
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 2544.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Admin/SI_Relatorios.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Relatorios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Relatorios')
+ 4 SYSTEMPATH/CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Relatorios', true)
+ 5 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 09:46:09 --> getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1215.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 843.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1215.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 843)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(843): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1215.jpeg')
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('355', '-1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 10:03:37 --> imagesx(): Argument #1 ($image) must be of type GdImage, false given
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 942.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(942): imagesx(false)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(862): App\Controllers\Admin\relatorio_lista_carometro->scale_image(false)
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 13:23:40 --> imagesx(): Argument #1 ($image) must be of type GdImage, false given
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 942.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(942): imagesx(false)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(862): App\Controllers\Admin\relatorio_lista_carometro->scale_image(false)
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 13:24:00 --> imagesx(): Argument #1 ($image) must be of type GdImage, false given
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 942.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(942): imagesx(false)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(862): App\Controllers\Admin\relatorio_lista_carometro->scale_image(false)
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 13:25:57 --> imagesx(): Argument #1 ($image) must be of type GdImage, false given
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 942.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(942): imagesx(false)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(862): App\Controllers\Admin\relatorio_lista_carometro->scale_image(false)
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 13:29:27 --> imagesx(): Argument #1 ($image) must be of type GdImage, false given
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 942.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(942): imagesx(false)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(862): App\Controllers\Admin\relatorio_lista_carometro->scale_image(false)
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-07 13:31:21 --> imagesx(): Argument #1 ($image) must be of type GdImage, false given
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 942.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(942): imagesx(false)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(862): App\Controllers\Admin\relatorio_lista_carometro->scale_image(false)
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '1', '2024')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()

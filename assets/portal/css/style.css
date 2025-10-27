@@ -1,0 +1,78 @@
+body{
+    background-color: #C76F29;
+}
+
+.dia_dia{
+    background-color: #FE8222;
+}
+
+.dia_dia ul li>img{
+    height: 130px;
+}
+
+.rodape{
+    background-color: #F8F9FA;
+}
+
+.nav-link{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #797979;
+}
+
+@media (min-width: 1300px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1300px !important;
+    }
+  }
+
+.largura1300 {
+    min-width: 1300px;
+}
+
+.triangle {
+    height: 33%;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(100% 0,0 50%,100% 100%);
+    object-fit: cover;
+    position: absolute;
+    margin: 20.15% 0 0 -97.5%;	
+  }
+  
+  .triangle-02 {
+    height: 33%;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(100% 0,0 50%,100% 100%);
+    object-fit: cover;
+    position: absolute;
+    margin: 30.25% 0 0 -80.35%;	
+  }
+  
+  .triangle-03 {
+    height: 33%;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(100% 0,0 50%,100% 100%);
+    object-fit: cover;
+    position: absolute;
+    margin: 40.3% 0 0 -63.15%;	
+  }
+
+  .slides_portal{
+      position: absolute;
+      margin-top: 38%;
+      margin-left: 60%;
+      z-index: 1;
+      width: 35%;
+  }
+
+  .video_portal{
+      position: absolute;
+      margin-top: 43%;
+      margin-left: -13%;
+      z-index: 1;
+  }
+
+ 

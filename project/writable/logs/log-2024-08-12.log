@@ -1,0 +1,95 @@
+CRITICAL - 2024-08-12 09:54:10 --> Undefined variable: altura_linha_separar
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 78.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: altura_linha_separar', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 78, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('101', '101')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 09:55:56 --> getimagesize(visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg): failed to open stream: No such file or directory
+in APPPATH\Controllers\Fpdf\fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Fpdf\\fpdf.php', 1257, [...])
+ 2 APPPATH\Controllers\Fpdf\fpdf.php(1257): getimagesize('visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg')
+ 3 APPPATH\Controllers\Fpdf\fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg')
+ 4 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(36): App\Controllers\Fpdf\FPDF->Image('visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg', 6, 4, 198, 15)
+ 5 APPPATH\Controllers\Fpdf\fpdf.php(332): App\Controllers\Admin\FPDF_Relatorio_matricula->Header()
+ 6 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(88): App\Controllers\Fpdf\FPDF->AddPage()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('101', '101')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 09:58:45 --> getimagesize(visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg): failed to open stream: No such file or directory
+in APPPATH\Controllers\Fpdf\fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Fpdf\\fpdf.php', 1257, [...])
+ 2 APPPATH\Controllers\Fpdf\fpdf.php(1257): getimagesize('visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg')
+ 3 APPPATH\Controllers\Fpdf\fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg')
+ 4 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(36): App\Controllers\Fpdf\FPDF->Image('visao/pagina/conteudo/relatorio/boletim/TOPO2.jpg', 6, 4, 198, 15)
+ 5 APPPATH\Controllers\Fpdf\fpdf.php(332): App\Controllers\Admin\FPDF_Relatorio_matricula->Header()
+ 6 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(89): App\Controllers\Fpdf\FPDF->AddPage()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('101', '101')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:05:21 --> Call to a member function hasValue() on null
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 171.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('101', Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:08:23 --> getimagesize(http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+in APPPATH\Controllers\Fpdf\fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+', 'APPPATH\\Controllers\\Fpdf\\fpdf.php', 1257, [...])
+ 2 APPPATH\Controllers\Fpdf\fpdf.php(1257): getimagesize('http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg')
+ 3 APPPATH\Controllers\Fpdf\fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg')
+ 4 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(44): App\Controllers\Fpdf\FPDF->Image('http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg', 6, 286, 198, 3)
+ 5 APPPATH\Controllers\Fpdf\fpdf.php(281): App\Controllers\Admin\FPDF_Relatorio_matricula->Footer()
+ 6 APPPATH\Controllers\Fpdf\fpdf.php(990): App\Controllers\Fpdf\FPDF->Close()
+ 7 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(859): App\Controllers\Fpdf\FPDF->Output()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('101', Object(stdClass))
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:08:38 --> getimagesize(http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+in APPPATH\Controllers\Fpdf\fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+', 'APPPATH\\Controllers\\Fpdf\\fpdf.php', 1257, [...])
+ 2 APPPATH\Controllers\Fpdf\fpdf.php(1257): getimagesize('http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg')
+ 3 APPPATH\Controllers\Fpdf\fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg')
+ 4 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(44): App\Controllers\Fpdf\FPDF->Image('http://local.portal/assets/admin/dist/RODAPEP_LISTRAS.jpg', 6, 286, 198, 3)
+ 5 APPPATH\Controllers\Fpdf\fpdf.php(281): App\Controllers\Admin\FPDF_Relatorio_matricula->Footer()
+ 6 APPPATH\Controllers\Fpdf\fpdf.php(990): App\Controllers\Fpdf\FPDF->Close()
+ 7 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(859): App\Controllers\Fpdf\FPDF->Output()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('102', Object(stdClass))
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:37:13 --> Trying to get property 'fk_turma' of non-object
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 125.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'fk_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('103', null)
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:38:06 --> Trying to get property 'fk_turma' of non-object
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 125.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'fk_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('103', null)
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:38:13 --> Trying to get property 'fk_turma' of non-object
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 125.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'fk_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('104', null)
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-12 11:38:41 --> Trying to get property 'fk_turma' of non-object
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 125.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'fk_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('110', null)
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()

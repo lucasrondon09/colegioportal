@@ -1,0 +1,7 @@
+CRITICAL - 2024-08-22 11:06:48 --> Call to a member function isFile() on null
+in APPPATH\Controllers\Admin\SI_Alunos.php on line 232.
+ 1 APPPATH\Controllers\Admin\SI_Alunos.php(199): App\Controllers\Admin\SI_Alunos->update('101')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Alunos->edit('101')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Alunos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()

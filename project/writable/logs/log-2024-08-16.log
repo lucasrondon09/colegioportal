@@ -1,0 +1,18 @@
+CRITICAL - 2024-08-16 09:36:30 --> Trying to get property 'fk_turma' of non-object
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 125.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'fk_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor('104', null)
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-16 10:50:58 --> Undefined variable: arquivos
+in APPPATH\Views\admin\SI_PaginasInternas\index.php on line 92.
+ 1 APPPATH\Views\admin\SI_PaginasInternas\index.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: arquivos', 'APPPATH\\Views\\admin\\SI_PaginasInternas\\index.php', 92, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_PaginasInternas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_PaginasInternas/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\SI_PaginasInternas.php(43): view('admin/SI_PaginasInternas/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_PaginasInternas->index('9')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_PaginasInternas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()

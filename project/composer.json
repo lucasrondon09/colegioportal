@@ -1,0 +1,16 @@
+{
+    "name": "rondon/project",
+    "autoload": {
+        "psr-4": {
+            "Rondon\\Project\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}

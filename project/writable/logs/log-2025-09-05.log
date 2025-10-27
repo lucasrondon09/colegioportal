@@ -1,0 +1,99 @@
+CRITICAL - 2025-09-05 11:24:22 --> Unclosed '{' on line 18
+in APPPATH\Controllers\Admin\SI_Turma.php on line 1409.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\SI_Turma.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Turma')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Turma')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Turma', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 11:24:37 --> Unclosed '{' on line 18
+in APPPATH\Controllers\Admin\SI_Turma.php on line 1409.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\SI_Turma.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Turma')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Turma')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Turma', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 11:24:40 --> Unclosed '{' on line 18
+in APPPATH\Controllers\Admin\SI_Turma.php on line 1409.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\SI_Turma.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Turma')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Turma')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Turma', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 11:24:43 --> Too few arguments to function App\Controllers\Admin\Auth::index(), 0 passed in C:\wamp64\www\portal\project\system\CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH\Controllers\Admin\Auth.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 11:25:03 --> Too few arguments to function App\Controllers\Admin\Auth::index(), 0 passed in C:\wamp64\www\portal\project\system\CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH\Controllers\Admin\Auth.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 11:25:22 --> Too few arguments to function App\Controllers\Admin\Auth::index(), 0 passed in C:\wamp64\www\portal\project\system\CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH\Controllers\Admin\Auth.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 15:46:32 --> Too few arguments to function App\Controllers\Admin\Auth::index(), 0 passed in C:\wamp64\www\portal\project\system\CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH\Controllers\Admin\Auth.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 16:44:56 --> Class "Mpdf\Mpdf" not found
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_contrato_aluno_pdf('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 16:45:50 --> Class "Mpdf\Mpdf" not found
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_contrato_aluno_pdf('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 16:46:07 --> Class "Mpdf\Mpdf" not found
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_contrato_aluno_pdf('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 16:47:01 --> Class "Mpdf\Mpdf" not found
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_contrato_aluno_pdf('402', '717')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 16:49:18 --> require(C:\wamp64\www\portal\project\vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 17.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\wamp64\\www\\portal\\project\\vendor/autoload.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 17)
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(17): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(283): include_once('APPPATH\\Controllers\\Admin\\SI_Relatorios.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\SI_Relatorios.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Relatorios')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Relatorios')
+ 7 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Relatorios', true)
+ 8 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-05 16:49:30 --> require(C:\wamp64\www\portal\project\vendor\autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 17.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\wamp64\\www\\portal\\project\\vendor\\autoload.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 17)
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(17): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(283): include_once('APPPATH\\Controllers\\Admin\\SI_Relatorios.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\SI_Relatorios.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SI_Relatorios')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SI_Relatorios')
+ 7 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\SI_Relatorios', true)
+ 8 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()

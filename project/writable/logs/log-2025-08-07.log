@@ -1,0 +1,18 @@
+CRITICAL - 2025-08-07 17:50:23 --> Undefined array key 0
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 711.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(711): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 711)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(160): App\Controllers\Admin\relatorio_lista_carometro->render([])
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(108): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '-1', '-1')
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-07 17:50:34 --> Undefined array key 0
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 711.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(711): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH/Controllers/Admin/SI_Relatorios.php', 711)
+ 2 APPPATH/Controllers/Admin/SI_Relatorios.php(160): App\Controllers\Admin\relatorio_lista_carometro->render([])
+ 3 APPPATH/Controllers/Admin/SI_Relatorios.php(108): App\Controllers\Admin\SI_Relatorios->listas_carometro('-1', '-1', '2025')
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

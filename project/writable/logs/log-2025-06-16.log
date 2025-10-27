@@ -1,0 +1,33 @@
+CRITICAL - 2025-06-16 13:56:14 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5337): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(599): App\Controllers\Admin\monta_pdf_boletim_turma->render('399', '1245')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('399', '1245')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-16 13:59:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+				OR -1 = -1 AND t.ano = -1 AND t.status = 1
+			order by n.ordem, t.ano, t.n' at line 7 in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(292): mysqli->query('\n\t\t\tselect conc...', 0)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tselect conc...')
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tselect conc...')
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(805): CodeIgniter\Database\BaseConnection->query('\n\t\t\tselect conc...')
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/SI_Relatorios.php(251): CodeIgniter\Model->__call('query', Array)
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/SI_Relatorios.php(97): App\Controllers\Admin\SI_Relatorios->listas_chamada('-1', '-1')
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(72): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-06-16 13:59:03 --> Call to a member function getResultArray() on false
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 251.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(97): App\Controllers\Admin\SI_Relatorios->listas_chamada('-1', '-1')
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,13 @@
+CRITICAL - 2025-05-01 06:22:36 --> Undefined variable $sent
+in APPPATH/Controllers/Site/Contatos.php on line 70.
+ 1 APPPATH/Controllers/Site/Contatos.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sent', 'APPPATH/Controllers/Site/Contatos.php', 70)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->sendMail()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 18:09:04 --> Too few arguments to function App\Controllers\Admin\Auth::index(), 0 passed in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH/Controllers/Admin/Auth.php on line 23.
+ 1 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Auth->index()
+ 2 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Auth))
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

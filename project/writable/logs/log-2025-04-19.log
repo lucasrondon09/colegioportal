@@ -1,0 +1,11 @@
+CRITICAL - 2025-04-19 16:24:55 --> Arquivo não encontrado: Boletim_turma.pdf
+in SYSTEMPATH/Files/File.php on line 47.
+ 1 SYSTEMPATH/Files/File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Boletim_turma.pdf')
+ 2 SYSTEMPATH/HTTP/DownloadResponse.php(97): CodeIgniter\Files\File->__construct('Boletim_turma.pdf', true)
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(792): CodeIgniter\HTTP\DownloadResponse->setFilePath('Boletim_turma.pdf')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(5333): CodeIgniter\HTTP\Response->download('Boletim_turma.pdf', null)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(595): App\Controllers\Admin\monta_pdf_boletim_turma->render('402', '606')
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('402', '606')
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

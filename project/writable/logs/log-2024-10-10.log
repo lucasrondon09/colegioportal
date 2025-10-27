@@ -1,0 +1,8 @@
+CRITICAL - 2024-10-10 09:15:03 --> imagejpeg(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1728396534_efc5c01dc849decca329.jpeg): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagejpeg(https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1728396534_efc5c01dc849decca329.jpeg): Failed to open stream: HTTP wrapper does not support writeable connections', 'APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php', 193)
+ 2 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(193): imagejpeg(Object(GdImage), 'https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1728396534_efc5c01dc849decca329.jpeg', 96)
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()

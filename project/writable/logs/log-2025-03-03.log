@@ -1,0 +1,7 @@
+CRITICAL - 2025-03-03 15:23:35 --> Undefined variable $sent
+in APPPATH/Controllers/Site/Contatos.php on line 70.
+ 1 APPPATH/Controllers/Site/Contatos.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sent', 'APPPATH/Controllers/Site/Contatos.php', 70)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->sendMail()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

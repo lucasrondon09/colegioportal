@@ -1,0 +1,111 @@
+CRITICAL - 2024-08-07 09:44:47 --> getimagesize(http://local.portal/assets/dist/img/arquivo_foto_aluno/1215.jpeg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 843.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://local.portal/assets/dist/img/arquivo_foto_aluno/1215.jpeg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 843, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(843): getimagesize('http://local.portal/assets/dist/img/arquivo_foto_aluno/1215.jpeg')
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('355', '-1', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 09:45:10 --> getimagesize(http://local.portal/assets/dist/img/arquivo_foto_aluno/1243.jpg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 843.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://local.portal/assets/dist/img/arquivo_foto_aluno/1243.jpg): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 843, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(843): getimagesize('http://local.portal/assets/dist/img/arquivo_foto_aluno/1243.jpg')
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(119): App\Controllers\Admin\relatorio_lista_carometro->render([...])
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(67): App\Controllers\Admin\SI_Relatorios->listas_carometro('369', '-1', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 09:59:47 --> Class 'App\Controllers\Fpdf\Exception' not found
+in APPPATH\Controllers\Fpdf\fpdf.php on line 269.
+ 1 APPPATH\Controllers\Fpdf\fpdf.php(1060): App\Controllers\Fpdf\FPDF->Error('Some data has already been output, can\'t send PDF file')
+ 2 APPPATH\Controllers\Fpdf\fpdf.php(1019): App\Controllers\Fpdf\FPDF->_checkoutput()
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(1506): App\Controllers\Fpdf\FPDF->Output('D', 'Tarefas.pdf')
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(1682): App\Controllers\Admin\relatorio_tarefas_pdf->set_vetores('9º ANO ', '2024', '_____________________________ ', [...])
+ 5 APPPATH\Controllers\Admin\SI_Relatorios.php(178): App\Controllers\Admin\relatorio_tarefas_montar->render('-1', true, -1, '2024')
+ 6 APPPATH\Controllers\Admin\SI_Relatorios.php(59): App\Controllers\Admin\SI_Relatorios->listas_tarefas(-1, '2024')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 10:20:10 --> Undefined index: turma
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1463.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1463): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: turma', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1463, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1682): App\Controllers\Admin\relatorio_tarefas_pdf->set_vetores('9º ANO ', '2024', '_____________________________ ', [...])
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(178): App\Controllers\Admin\relatorio_tarefas_montar->render('-1', true, -1, '2024')
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(59): App\Controllers\Admin\SI_Relatorios->listas_tarefas(-1, '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 10:44:52 --> Undefined variable: disciplina
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1505.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1505): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: disciplina', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1505, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1427): App\Controllers\Admin\relatorio_tarefas_pdf->parteFinal()
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(1691): App\Controllers\Admin\relatorio_tarefas_pdf->set_vetores('INFANTIL 1', '2024', '_____________________________ ', [...])
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(178): App\Controllers\Admin\relatorio_tarefas_montar->render('-1', true, -1, '2024')
+ 5 APPPATH\Controllers\Admin\SI_Relatorios.php(59): App\Controllers\Admin\SI_Relatorios->listas_tarefas(-1, '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 20:01:56 --> Undefined variable: disciplina
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1071.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1071): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: disciplina', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1071, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1044): App\Controllers\Admin\relatorio_diario_pdf->set_vetores([...], [...])
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(125): App\Controllers\Admin\relatorio_diario_montar->render('355', '-1')
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(63): App\Controllers\Admin\SI_Relatorios->listas_classe('355', '-1')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 20:06:08 --> Undefined index: 1t
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1204.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1204): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: 1t', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1204, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1125): App\Controllers\Admin\relatorio_diario_pdf->gerar_alunos([...])
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(1090): App\Controllers\Admin\relatorio_diario_pdf->diarioClassePage('1º ANO A', 'Ensino fundamental', '-1', '2024', 'MATUTINO', [...])
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(1044): App\Controllers\Admin\relatorio_diario_pdf->set_vetores([...], [...])
+ 5 APPPATH\Controllers\Admin\SI_Relatorios.php(125): App\Controllers\Admin\relatorio_diario_montar->render('355', '-1')
+ 6 APPPATH\Controllers\Admin\SI_Relatorios.php(63): App\Controllers\Admin\SI_Relatorios->listas_classe('355', '-1')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 20:12:18 --> Undefined index: notas_disciplina
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1082.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1082): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notas_disciplina', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1082, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1044): App\Controllers\Admin\relatorio_diario_pdf->set_vetores([...], [...])
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(125): App\Controllers\Admin\relatorio_diario_montar->render('355', '-1')
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(63): App\Controllers\Admin\SI_Relatorios->listas_classe('355', '-1')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 20:13:12 --> Undefined index: notas_disciplina
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1082.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1082): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notas_disciplina', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1082, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1044): App\Controllers\Admin\relatorio_diario_pdf->set_vetores([...], [...])
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(125): App\Controllers\Admin\relatorio_diario_montar->render('355', '-1')
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(63): App\Controllers\Admin\SI_Relatorios->listas_classe('355', '-1')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-07 20:47:59 --> Undefined index: 1t
+in APPPATH\Controllers\Admin\SI_Relatorios.php on line 1253.
+ 1 APPPATH\Controllers\Admin\SI_Relatorios.php(1253): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: 1t', 'APPPATH\\Controllers\\Admin\\SI_Relatorios.php', 1253, [...])
+ 2 APPPATH\Controllers\Admin\SI_Relatorios.php(1173): App\Controllers\Admin\relatorio_diario_pdf->gerar_alunos([...])
+ 3 APPPATH\Controllers\Admin\SI_Relatorios.php(1110): App\Controllers\Admin\relatorio_diario_pdf->diarioClassePage('1º ANO A', 'Ensino fundamental', 'Português', '2024', 'MATUTINO', [...])
+ 4 APPPATH\Controllers\Admin\SI_Relatorios.php(1044): App\Controllers\Admin\relatorio_diario_pdf->set_vetores([...], [...])
+ 5 APPPATH\Controllers\Admin\SI_Relatorios.php(125): App\Controllers\Admin\relatorio_diario_montar->render('355', '-1')
+ 6 APPPATH\Controllers\Admin\SI_Relatorios.php(63): App\Controllers\Admin\SI_Relatorios->listas_classe('355', '-1')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->listas_send()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()

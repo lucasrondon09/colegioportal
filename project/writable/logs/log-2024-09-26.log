@@ -1,0 +1,117 @@
+CRITICAL - 2024-09-26 10:10:26 --> Function utf8_decode() is deprecated
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 98.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(98): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function utf8_decode() is deprecated', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 10:27:03 --> Attempt to read property "id_grau" on array
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 132.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_grau" on array', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 10:28:35 --> Function utf8_decode() is deprecated
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 802.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(802): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function utf8_decode() is deprecated', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 802)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 10:59:51 --> Undefined variable $tableItem
+in APPPATH\Views\admin\SI_Turma\alunos.php on line 31.
+ 1 APPPATH\Views\admin\SI_Turma\alunos.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableItem', 'APPPATH\\Views\\admin\\SI_Turma\\alunos.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_Turma\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_Turma/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\SI_Turma.php(213): view('admin/SI_Turma/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunos('369')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 11:02:03 --> Undefined variable $turma
+in APPPATH\Views\admin\SI_Turma\alunos.php on line 34.
+ 1 APPPATH\Views\admin\SI_Turma\alunos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $turma', 'APPPATH\\Views\\admin\\SI_Turma\\alunos.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_Turma\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_Turma/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\SI_Turma.php(213): view('admin/SI_Turma/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunos('369')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 18:15:30 --> imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/1241.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 985.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/1241.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 985)
+ 2 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(985): imagecreatefromjpeg('http://local.portal/assets/dist/img/arquivo_foto_aluno/1241.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor_turma()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 18:15:47 --> imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/1241.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 985.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/1241.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 985)
+ 2 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(985): imagecreatefromjpeg('http://local.portal/assets/dist/img/arquivo_foto_aluno/1241.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor_turma()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 18:19:44 --> imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/semfoto.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 985.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/semfoto.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 985)
+ 2 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(985): imagecreatefromjpeg('http://local.portal/assets/dist/img/arquivo_foto_aluno/semfoto.jpeg')
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor_turma()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 18:20:07 --> imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/semfoto.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 985.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefromjpeg(http://local.portal/assets/dist/img/arquivo_foto_aluno/semfoto.jpeg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 985)
+ 2 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(985): imagecreatefromjpeg('http://local.portal/assets/dist/img/arquivo_foto_aluno/semfoto.jpeg')
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor_turma()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 18:35:01 --> Attempt to read property "id_grau" on array
+in APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php on line 931.
+ 1 APPPATH\Controllers\Admin\SI_RequerimentoMatricula.php(931): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_grau" on array', 'APPPATH\\Controllers\\Admin\\SI_RequerimentoMatricula.php', 931)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor_turma()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 19:00:39 --> Não há dados para update.
+in SYSTEMPATH\BaseModel.php on line 868.
+ 1 SYSTEMPATH\BaseModel.php(868): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(725): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Admin\SI_Turma.php(249): CodeIgniter\Model->update('3061', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunoTransferir()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 19:09:05 --> Object of class App\Models\Admin\SI_AlunoTurmaModel could not be converted to string
+in APPPATH\Controllers\Admin\SI_Turma.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunoTransferir()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 19:11:26 --> Object of class App\Models\Admin\SI_AlunoTurmaModel could not be converted to string
+in APPPATH\Controllers\Admin\SI_Turma.php on line 253.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunoTransferir()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-26 19:14:53 --> Object of class App\Models\Admin\SI_AlunoTurmaModel could not be converted to string
+in APPPATH\Controllers\Admin\SI_Turma.php on line 253.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunoTransferir()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()

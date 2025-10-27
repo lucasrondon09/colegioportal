@@ -1,0 +1,30 @@
+CRITICAL - 2024-10-22 11:48:38 --> getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known
+in APPPATH/Controllers/Fpdf/fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known', 'APPPATH/Controllers/Fpdf/fpdf.php', 1257)
+ 2 APPPATH/Controllers/Fpdf/fpdf.php(1257): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/867.jpeg')
+ 3 APPPATH/Controllers/Fpdf/fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/867.jpeg')
+ 4 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(197): App\Controllers\Fpdf\FPDF->Image('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/867.jpeg', 150, 55, 35)
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 11:49:01 --> getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known
+in APPPATH/Controllers/Fpdf/fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known', 'APPPATH/Controllers/Fpdf/fpdf.php', 1257)
+ 2 APPPATH/Controllers/Fpdf/fpdf.php(1257): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/867.jpeg')
+ 3 APPPATH/Controllers/Fpdf/fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/867.jpeg')
+ 4 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(197): App\Controllers\Fpdf\FPDF->Image('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/867.jpeg', 150, 55, 35)
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 17:01:10 --> unlink(/home/storage/4/8f/cf/colegioportalcui1/public_html/project/writable/debugbar/debugbar_1729630304.308528.json): No such file or directory
+in SYSTEMPATH/Debug/Toolbar/Collectors/History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(/home/storage/4/8f/cf/colegioportalcui1/public_html/project/writable/debugbar/debugbar_1729630304.308528.json): No such file or directory', 'SYSTEMPATH/Debug/Toolbar/Collectors/History.php', 76)
+ 2 SYSTEMPATH/Debug/Toolbar/Collectors/History.php(76): unlink('FCPATH/project/writable/debugbar/debugbar_1729630304.308528.json')
+ 3 SYSTEMPATH/Debug/Toolbar.php(499): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1729630869.618274', 20)
+ 4 SYSTEMPATH/Debug/Toolbar.php(478): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH/Config/Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH/Events/Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH/CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

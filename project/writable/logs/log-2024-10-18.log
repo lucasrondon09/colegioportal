@@ -1,0 +1,118 @@
+CRITICAL - 2024-10-18 07:24:18 --> Class "App\Controllers\Admin\nota" not found
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 5228.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(556): App\Controllers\Admin\monta_pdf_boletim_turma->render('369', '516')
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('369', '516')
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-18 07:24:29 --> Class "App\Controllers\Admin\nota" not found
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 5228.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(556): App\Controllers\Admin\monta_pdf_boletim_turma->render('369', '516')
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('369', '516')
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-18 07:25:15 --> Class "App\Controllers\Admin\nota" not found
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 6534.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(562): App\Controllers\Admin\monta_pdf_ficha_individual->render('369', '516')
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma_ficha('369', '516')
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-18 07:25:21 --> Class "App\Controllers\Admin\nota" not found
+in APPPATH/Controllers/Admin/SI_Relatorios.php on line 5228.
+ 1 APPPATH/Controllers/Admin/SI_Relatorios.php(556): App\Controllers\Admin\monta_pdf_boletim_turma->render('369', null)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma('369')
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-18 15:35:16 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`colegioportal`.`galeria`, CONSTRAINT `galeria_categorias` FOREIGN KEY (`idCategoria`) REFERENCES `galeria_categorias` (`id`)) in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ga...', 0)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ga...')
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ga...')
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ga...', Array, false)
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(126): CodeIgniter\Model->insert(Array)
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(81): App\Controllers\Admin\Galeria->save()
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\Galeria->create()
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+#11 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(71): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-10-18 15:35:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`colegioportal`.`galeria`, CONSTRAINT `galeria_categorias` FOREIGN KEY (`idCategoria`) REFERENCES `galeria_categorias` (`id`)) in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ga...', 0)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ga...')
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ga...')
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ga...', Array, false)
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(126): CodeIgniter\Model->insert(Array)
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(81): App\Controllers\Admin\Galeria->save()
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\Galeria->create()
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+#11 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(71): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-10-18 15:36:52 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for colegioportal.mysql.dbaas.com.br failed: Name or service not known in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:170
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', '/home/storage/4...', 170)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(170): mysqli->real_connect('colegioportal.m...', 'colegioportal', Object(SensitiveParameterValue), 'colegioportal', 3306, '', 0)
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(52): CodeIgniter\BaseModel->paginate(10)
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\Galeria->index()
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(71): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for colegioportal.mysql.dbaas.com.br failed: Name or service not known in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:170
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(170): mysqli->real_connect('colegioportal.m...', 'colegioportal', Object(SensitiveParameterValue), 'colegioportal', 3306, '', 0)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(52): CodeIgniter\BaseModel->paginate(10)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\Galeria->index()
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(71): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for ****.mysql.dbaas.com.br failed: Name or service not known in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/Galeria.php(52): CodeIgniter\BaseModel->paginate(10)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\Galeria->index()
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(71): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-10-18 15:36:52 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for ****.mysql.dbaas.com.br failed: Name or service not known
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `galeria`
+WHERE `galeria`.`deleted_at` IS NULL', [], false)
+ 3 SYSTEMPATH/Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH/BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH/Controllers/Admin/Galeria.php(52): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Galeria->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(71): CodeIgniter\CodeIgniter->run()

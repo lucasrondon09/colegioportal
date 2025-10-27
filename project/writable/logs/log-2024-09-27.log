@@ -1,0 +1,7 @@
+CRITICAL - 2024-09-27 10:08:52 --> Undefined array key "turmar"
+in APPPATH\Controllers\Admin\SI_Turma.php on line 221.
+ 1 APPPATH\Controllers\Admin\SI_Turma.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "turmar"', 'APPPATH\\Controllers\\Admin\\SI_Turma.php', 221)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunos('359')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()

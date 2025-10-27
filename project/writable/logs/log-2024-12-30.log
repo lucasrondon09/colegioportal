@@ -1,0 +1,15 @@
+ERROR - 2024-12-30 15:36:12 --> mysqli_sql_exception: Duplicate entry '660-402' for key 'fk_aluno' in /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `si_alun...', 0)
+#1 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `si_alun...')
+#2 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `si_alun...')
+#3 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `si_alun...', Array, false)
+#4 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(362): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/BaseModel.php(887): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/Model.php(725): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/app/Controllers/Admin/SI_Turma.php(332): CodeIgniter\Model->update(3407, Array)
+#8 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->alunoTransferir()
+#9 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+#10 /home/storage/4/8f/cf/colegioportalcui1/public_html/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/storage/4/8f/cf/colegioportalcui1/public_html/index.php(72): CodeIgniter\CodeIgniter->run()
+#12 {main}

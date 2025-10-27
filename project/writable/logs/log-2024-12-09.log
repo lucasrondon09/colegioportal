@@ -1,0 +1,24 @@
+CRITICAL - 2024-12-09 16:23:34 --> getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known
+in APPPATH/Controllers/Fpdf/fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known', 'APPPATH/Controllers/Fpdf/fpdf.php', 1257)
+ 2 APPPATH/Controllers/Fpdf/fpdf.php(1257): getimagesize('https://colegioportalcuiaba.com.br/assets/admin/dist/img/logo_boletim.jpg')
+ 3 APPPATH/Controllers/Fpdf/fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('https://colegioportalcuiaba.com.br/assets/admin/dist/img/logo_boletim.jpg')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(6640): App\Controllers\Fpdf\FPDF->Image('https://colegioportalcuiaba.com.br/assets/admin/dist/img/logo_boletim.jpg', 10, 10, 95, 12)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(6583): App\Controllers\Admin\pdf_ficha_individual->gerar_aluno([...])
+ 6 APPPATH/Controllers/Admin/SI_Relatorios.php(562): App\Controllers\Admin\monta_pdf_ficha_individual->render('368', '1054')
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma_ficha('368', '1054')
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-09 16:24:51 --> getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known
+in APPPATH/Controllers/Fpdf/fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known', 'APPPATH/Controllers/Fpdf/fpdf.php', 1257)
+ 2 APPPATH/Controllers/Fpdf/fpdf.php(1257): getimagesize('https://colegioportalcuiaba.com.br/assets/admin/dist/img/logo_boletim.jpg')
+ 3 APPPATH/Controllers/Fpdf/fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('https://colegioportalcuiaba.com.br/assets/admin/dist/img/logo_boletim.jpg')
+ 4 APPPATH/Controllers/Admin/SI_Relatorios.php(6640): App\Controllers\Fpdf\FPDF->Image('https://colegioportalcuiaba.com.br/assets/admin/dist/img/logo_boletim.jpg', 10, 10, 95, 12)
+ 5 APPPATH/Controllers/Admin/SI_Relatorios.php(6583): App\Controllers\Admin\pdf_ficha_individual->gerar_aluno([...])
+ 6 APPPATH/Controllers/Admin/SI_Relatorios.php(562): App\Controllers\Admin\monta_pdf_ficha_individual->render('368', '1264')
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Relatorios->gerar_boletim_turma_ficha('368', '1264')
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Relatorios))
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()

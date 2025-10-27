@@ -1,0 +1,33 @@
+CRITICAL - 2024-11-14 10:42:41 --> getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known
+in APPPATH/Controllers/Fpdf/fpdf.php on line 1257.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(): php_network_getaddresses: getaddrinfo for colegioportalcuiaba.com.br failed: Name or service not known', 'APPPATH/Controllers/Fpdf/fpdf.php', 1257)
+ 2 APPPATH/Controllers/Fpdf/fpdf.php(1257): getimagesize('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1731594917_fef898a03cffb92b8954.jpg')
+ 3 APPPATH/Controllers/Fpdf/fpdf.php(892): App\Controllers\Fpdf\FPDF->_parsejpg('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1731594917_fef898a03cffb92b8954.jpg')
+ 4 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(197): App\Controllers\Fpdf\FPDF->Image('https://colegioportalcuiaba.com.br/assets/dist/img/arquivo_foto_aluno/1731594917_fef898a03cffb92b8954.jpg', 150, 55, 35)
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 11:13:42 --> Attempt to read property "id_grau" on array
+in APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php on line 134.
+ 1 APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_grau" on array', 'APPPATH/Controllers/Admin/SI_RequerimentoMatricula.php', 134)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_RequerimentoMatricula->adicionar_vetor()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_RequerimentoMatricula))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 15:26:12 --> Undefined array key "turma"
+in APPPATH/Controllers/Admin/SI_Turma.php on line 964.
+ 1 APPPATH/Controllers/Admin/SI_Turma.php(964): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "turma"', 'APPPATH/Controllers/Admin/SI_Turma.php', 964)
+ 2 APPPATH/Controllers/Admin/SI_Turma.php(955): App\Controllers\Admin\SI_Turma->salvar_notas([])
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->lancarNotaSave()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 15:26:14 --> Undefined array key "turma"
+in APPPATH/Controllers/Admin/SI_Turma.php on line 964.
+ 1 APPPATH/Controllers/Admin/SI_Turma.php(964): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "turma"', 'APPPATH/Controllers/Admin/SI_Turma.php', 964)
+ 2 APPPATH/Controllers/Admin/SI_Turma.php(955): App\Controllers\Admin\SI_Turma->salvar_notas([])
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\SI_Turma->lancarNotaSave()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Turma))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(72): CodeIgniter\CodeIgniter->run()
