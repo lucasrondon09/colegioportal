@@ -302,6 +302,13 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?= base_url('Admin/SI_FormaPagamento')?>" class="nav-link">
+                  <i class="fas fa-credit-card mr-2"></i>
+                  <p>Formas de Pagamento</p>
+                </a>
+              </li>
+
 
               <!-- GERENCIAR SITE-->
               <h4 class="text-white mt-4">GERENCIAR SITE</h4>

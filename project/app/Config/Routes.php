@@ -206,6 +206,32 @@ $routes->add('/Admin/Contrato/update/(:num)', 'Admin\SI_Contrato::update/$1');
 $routes->add('/Admin/Contrato/lancamentos/(:num)', 'Admin\SI_Contrato::lancamentos/$1');
 $routes->add('/Admin/Contrato/lancamentos/cadastrar/(:num)', 'Admin\SI_Contrato::lancamentosCadastrar/$1');
 $routes->add('/Admin/Contrato/lancamentos/salvar/(:num)', 'Admin\SI_Contrato::lancamentosSalvar/$1');
+$routes->get('Admin/Contrato/registrarPagamento/(:num)', 'Admin\SI_Contrato::registrarPagamento/$1');
+$routes->post('Admin/Contrato/registrarPagamento/(:num)', 'Admin\SI_Contrato::registrarPagamento/$1');
+$routes->get('Admin/Contrato/excluirParcela/(:num)', 'Admin\SI_Contrato::excluirParcela/$1');
+$routes->get('Admin/Contrato/detalhesParcela/(:num)', 'Admin\SI_Contrato::detalhesParcela/$1');
+
+
+// Formas de Pagamento
+$routes->get('Admin/SI_FormaPagamento', 'Admin\SI_FormaPagamento::index');
+$routes->post('Admin/SI_FormaPagamento', 'Admin\SI_FormaPagamento::index');
+$routes->get('Admin/SI_FormaPagamento/cadastrar', 'Admin\SI_FormaPagamento::create');
+$routes->post('Admin/SI_FormaPagamento/cadastrar', 'Admin\SI_FormaPagamento::create');
+$routes->get('Admin/SI_FormaPagamento/editar/(:num)', 'Admin\SI_FormaPagamento::edit/$1');
+$routes->post('Admin/SI_FormaPagamento/editar/(:num)', 'Admin\SI_FormaPagamento::edit/$1');
+$routes->get('Admin/SI_FormaPagamento/excluir/(:num)', 'Admin\SI_FormaPagamento::delete/$1');
+$routes->get('Admin/SI_FormaPagamento/toggleStatus/(:num)', 'Admin\SI_FormaPagamento::toggleStatus/$1');
+// Editar Pagamento
+$routes->get('Admin/Contrato/editarPagamento/(:num)', 'Admin\SI_Contrato::editarPagamento/$1');
+$routes->post('Admin/Contrato/editarPagamento/(:num)', 'Admin\SI_Contrato::editarPagamento/$1');
+
+// Excluir Pagamento
+$routes->get('Admin/Contrato/excluirPagamento/(:num)', 'Admin\SI_Contrato::excluirPagamento/$1');
+
+// Estornar Pagamento (opcional)
+$routes->get('Admin/Contrato/estornarPagamento/(:num)', 'Admin\SI_Contrato::estornarPagamento/$1');
+$routes->post('Admin/Contrato/estornarPagamento/(:num)', 'Admin\SI_Contrato::estornarPagamento/$1');
+
 
 //SI_Relatorios
 //-------------------------------------------------------------------------

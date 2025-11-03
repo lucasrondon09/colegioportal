@@ -91,21 +91,34 @@ $session = \Config\Services::session();
                     <th></th>
                 </thead>
                 <tbody>
-                  <?php foreach ($table as $tableItem): ?>
-                    <tr>
-                      <td><?= $tableItem->numero_contrato ?></td>
-                      <td><?= $tableItem->aluno_nome ?></td>
-                      <td><?= $tableItem->responsavel_nome ?></td>
-                      <td><?= $tableItem->turma_nome ?></td>
-                      <td><?= $tableItem->turma_ano ?></td>
-                      <td>R$ <?= monetarioExibir($tableItem->valor_total) ?></td>
-                      <td><?= statusContrato($tableItem->status) ?></td>
-                      <td class="text-center" name="acoes">
-                        <a href="<?= base_url('Admin/Contrato/lancamentos/'.$tableItem->id); ?>" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Visualizar">
-                          <i class="fas fa-arrow-right"></i>
-                        </a>
-                      </td>
-                    </tr>
+                  <?php foreach ($table as $tableItem): 
+                  // Define badge class based on status
+                  $badgeClass = '';
+                  switch($tableItem->status) {
+                    case 1: $badgeClass = 'badge-info'; break;      // Aberto - blue
+                    case 2: $badgeClass = 'badge-success'; break;   // Ativo - green  
+                    case 3: $badgeClass = 'badge-secondary'; break; // Concluído - gray
+                    case 4: $badgeClass = 'badge-danger'; break;    // Cancelado - red
+                    case 5: $badgeClass = 'badge-warning'; break;   // Transferido - yellow
+                    case 6: $badgeClass = 'badge-light'; break;     // Suspenso - light gray
+                    case 7: $badgeClass = 'badge-danger'; break;    // Inadimplente - red
+                    case 8: $badgeClass = 'badge-dark'; break;      // Expirado - dark
+                  }
+                  ?>
+                  <tr>
+                    <td><?= $tableItem->numero_contrato ?></td>
+                    <td><?= $tableItem->aluno_nome ?></td>
+                    <td><?= $tableItem->responsavel_nome ?></td>
+                    <td><?= $tableItem->turma_nome ?></td>
+                    <td><?= $tableItem->turma_ano ?></td>
+                    <td>R$ <?= monetarioExibir($tableItem->valor_total) ?></td>
+                    <td><span class="badge <?= $badgeClass ?>"><?= statusContrato($tableItem->status) ?></span></td>
+                    <td class="text-center" name="acoes">
+                    <a href="<?= base_url('Admin/Contrato/lancamentos/'.$tableItem->id); ?>" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Visualizar">
+                    <i class="fas fa-arrow-right"></i>
+                    </a>
+                    </td>
+                  </tr>
                   <?php endforeach; ?>
                 </tbody>
               </table>

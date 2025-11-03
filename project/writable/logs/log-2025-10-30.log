@@ -1,0 +1,211 @@
+CRITICAL - 2025-10-30 09:44:01 --> Call to undefined method App\Models\Admin\SI_ContratoModel::getContratoCompleto
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\SI_Contrato.php(506): CodeIgniter\Model->__call('getContratoCompleto', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('5')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 09:54:56 --> Call to undefined method App\Models\Admin\SI_ContratoModel::getContratoCompleto
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\SI_Contrato.php(506): CodeIgniter\Model->__call('getContratoCompleto', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('7')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 10:14:10 --> Call to undefined method App\Models\Admin\SI_ContratoModel::getContratoCompleto
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\SI_Contrato.php(506): CodeIgniter\Model->__call('getContratoCompleto', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-30 10:14:38 --> mysqli_sql_exception: Table 'colegioportal.alunos' doesn't exist in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_cont...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_cont...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_cont...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_cont...', Array, false)
+#4 C:\wamp64\www\portal\project\app\Models\Admin\SI_ContratoModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_Contrato.php(506): App\Models\Admin\SI_ContratoModel->getContratoCompleto('21')
+#6 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-30 10:14:38 --> Table 'colegioportal.alunos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_contrato`.*, `alunos`.`nome` as `nome_aluno`, `responsaveis`.`nome` as `nome_responsavel`, `turmas`.`descricao` as `turma`
+FROM `si_contrato`
+JOIN `alunos` ON `alunos`.`id` = `si_contrato`.`id_aluno`
+JOIN `responsaveis` ON `responsaveis`.`id` = `si_contrato`.`id_responsavel`
+JOIN `turmas` ON `turmas`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = \'21\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_contrato`.*, `alunos`.`nome` as `nome_aluno`, `responsaveis`.`nome` as `nome_responsavel`, `turmas`.`descricao` as `turma`
+FROM `si_contrato`
+JOIN `alunos` ON `alunos`.`id` = `si_contrato`.`id_aluno`
+JOIN `responsaveis` ON `responsaveis`.`id` = `si_contrato`.`id_responsavel`
+JOIN `turmas` ON `turmas`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = \'21\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_contrato`.*, `alunos`.`nome` as `nome_aluno`, `responsaveis`.`nome` as `nome_responsavel`, `turmas`.`descricao` as `turma`
+FROM `si_contrato`
+JOIN `alunos` ON `alunos`.`id` = `si_contrato`.`id_aluno`
+JOIN `responsaveis` ON `responsaveis`.`id` = `si_contrato`.`id_responsavel`
+JOIN `turmas` ON `turmas`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = \'21\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_contrato`.*, `alunos`.`nome` as `nome_aluno`, `responsaveis`.`nome` as `nome_responsavel`, `turmas`.`descricao` as `turma`
+FROM `si_contrato`
+JOIN `alunos` ON `alunos`.`id` = `si_contrato`.`id_aluno`
+JOIN `responsaveis` ON `responsaveis`.`id` = `si_contrato`.`id_responsavel`
+JOIN `turmas` ON `turmas`.`id` = `si_contrato`.`id_turma`
+WHERE `si_contrato`.`id` = :si_contrato.id:', [...], false)
+ 5 APPPATH\Models\Admin\SI_ContratoModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\SI_Contrato.php(506): App\Models\Admin\SI_ContratoModel->getContratoCompleto('21')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 10:15:57 --> Call to undefined method App\Models\Admin\SI_ContratoModel::getContratoCompleto
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\SI_Contrato.php(506): CodeIgniter\Model->__call('getContratoCompleto', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 10:17:32 --> Arquivo inválido: admin/template/navbar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/template/navbar.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/template/navbar', [], true)
+ 3 APPPATH\Controllers\Admin\SI_Contrato.php(584): view('admin/template/navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 10:17:41 --> Arquivo inválido: admin/template/navbar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/template/navbar.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/template/navbar', [], true)
+ 3 APPPATH\Controllers\Admin\SI_Contrato.php(584): view('admin/template/navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 10:19:18 --> Undefined property: stdClass::$aluno_nome
+in APPPATH\Views\admin\SI_Contrato\editar_pagamento.php on line 47.
+ 1 APPPATH\Views\admin\SI_Contrato\editar_pagamento.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$aluno_nome', 'APPPATH\\Views\\admin\\SI_Contrato\\editar_pagamento.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_Contrato\\editar_pagamento.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_Contrato/editar_pagamento', [], true)
+ 5 APPPATH\Controllers\Admin\SI_Contrato.php(585): view('admin/SI_Contrato/editar_pagamento', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-30 10:20:39 --> Undefined property: stdClass::$aluno_nome
+in APPPATH\Views\admin\SI_Contrato\editar_pagamento.php on line 47.
+ 1 APPPATH\Views\admin\SI_Contrato\editar_pagamento.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$aluno_nome', 'APPPATH\\Views\\admin\\SI_Contrato\\editar_pagamento.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_Contrato\\editar_pagamento.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_Contrato/editar_pagamento', [], true)
+ 5 APPPATH\Controllers\Admin\SI_Contrato.php(586): view('admin/SI_Contrato/editar_pagamento', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-30 10:22:49 --> mysqli_sql_exception: Table 'colegioportal.si_responsavel' doesn't exist in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_cont...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_cont...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_cont...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_cont...', Array, false)
+#4 C:\wamp64\www\portal\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\portal\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\portal\project\app\Models\Admin\SI_ContratoModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_Contrato.php(506): App\Models\Admin\SI_ContratoModel->getContratoById('21')
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+#9 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+#10 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-10-30 10:22:49 --> Table 'colegioportal.si_responsavel' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_responsavel` ON `si_responsavel`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = \'21\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_responsavel` ON `si_responsavel`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = \'21\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_responsavel` ON `si_responsavel`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = \'21\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_responsavel` ON `si_responsavel`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = :si_contrato.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Admin\SI_ContratoModel.php(30): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Admin\SI_Contrato.php(506): App\Models\Admin\SI_ContratoModel->getContratoById('21')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-30 10:24:12 --> mysqli_sql_exception: Unknown column 'si_responsavel.rm_resp_financeiro_nome' in 'field list' in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_cont...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_cont...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_cont...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_cont...', Array, false)
+#4 C:\wamp64\www\portal\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\portal\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\portal\project\app\Models\Admin\SI_ContratoModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_Contrato.php(506): App\Models\Admin\SI_ContratoModel->getContratoById('21')
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+#9 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+#10 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-10-30 10:24:12 --> Unknown column 'si_responsavel.rm_resp_financeiro_nome' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`rm_resp_financeiro_nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = \'21\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`rm_resp_financeiro_nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = \'21\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`rm_resp_financeiro_nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = \'21\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `si_contrato`.*, `si_aluno`.`nome` as `nome_aluno`, `si_responsavel`.`rm_resp_financeiro_nome` as `nome_responsavel`
+FROM `si_contrato`
+JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+WHERE `si_contrato`.`id` = :si_contrato.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Admin\SI_ContratoModel.php(30): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Admin\SI_Contrato.php(506): App\Models\Admin\SI_ContratoModel->getContratoById('21')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_Contrato->editarPagamento('11')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_Contrato))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()

@@ -16,7 +16,7 @@ use App\Models\Admin\SI_TurmaModel;
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Contrato</h1>
+            <h1>Contrato - Lançamentos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -36,13 +36,13 @@ use App\Models\Admin\SI_TurmaModel;
           <div class="col-md-12">
             <!-- jquery validation -->
             <div class="card">
-              <h3 class="card-title mt-3">
+              <h3 class="card-title mt-3 ml-3">
                 <a href="javascript:history.back()" class="text-decoration-none text-dark">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                   </svg>
                 </a>
-                Dados do Registro
+                Dados do Contrato
               </h3>
               <!-- form start -->
               <?php
@@ -91,17 +91,8 @@ use App\Models\Admin\SI_TurmaModel;
                     <div class="col-md-12">
                       <h3><?= $contrato->aluno_nome?>
                       <span class="float-right">
-                        <a href="<?= base_url('/Admin/Contrato/lancamentos/cadastrar/'.$idContrato)?>" class="btn btn-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square mr-1" viewBox="0 0 16 16" style="vertical-align:middle">
-                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                          </svg>
-                          Editar Contrato
-                        </a>
                         <a href="<?= base_url('/Admin/Contrato/lancamentos/cadastrar/'.$idContrato)?>" class="btn btn-info">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg mr-1" viewBox="0 0 16 16" style="vertical-align:middle">
-                            <path d="M8 1a.5.5 0 0 1 .5.5V7.5H14a.5.5 0 0 1 0 1H8.5V14a.5.5 0 0 1-1 0V8.5H2a.5.5 0 0 1 0-1h5.5V1.5A.5.5 0 0 1 8 1z"/>
-                          </svg>
+                          <i class="fas fa-plus fa-fw"></i>
                           Novo Lançamento
                         </a>
                       </span>
@@ -113,84 +104,189 @@ use App\Models\Admin\SI_TurmaModel;
                       <h6 class="text-muted"><span class="font-weight-bold"> Data: </span><?= !empty($contrato->data_inicio) ? dataBR($contrato->data_inicio) : '--';?> <?= !empty($contrato->data_fim) ? 'à '.dataBR($contrato->data_fim) : '--';?></h6>
                     </div>
                   </div>
+                  
+                  <!-- Cards de Resumo Financeiro -->
                   <div class="row mt-3">
                     <div class="col-md-3">
-                      <div class="card border-info mb-3">     
+                      <div class="card border-primary mb-3">     
                         <div class="card-body">
-                          <p class="text-muted">VALOR DO CONTRATO <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-0 float-right" title="Ajuda" style="width:17px;height:17px;padding:0;display:inline-flex;align-items:center;justify-content:center;">?</a></p>
-                          <h3 class="card-text mb-3"><strong>R$ <?= monetarioExibir($contrato->valor_total)?></strong></h3>
-                          <p class="text-muted"><?= !empty($contrato->parcelas) ? $contrato->parcelas .' parcelas cadastradas' : 'Nenhuma parcela lançada' ?></p>
+                          <p class="text-muted mb-1">
+                            <i class="fas fa-file-contract text-primary"></i> VALOR DO CONTRATO
+                          </p>
+                          <h3 class="card-text mb-2"><strong>R$ <?= monetarioExibir($contrato->valor_total)?></strong></h3>
+                          <p class="text-muted mb-0">
+                            <small><?= !empty($contrato->parcelas) ? $contrato->parcelas .' parcelas cadastradas' : 'Nenhuma parcela lançada' ?></small>
+                          </p>
                          </div>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="card border-info mb-3">     
                         <div class="card-body">
-                          <p class="text-muted">VALOR A RECEBER <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-0 float-right" title="Ajuda" style="width:17px;height:17px;padding:0;display:inline-flex;align-items:center;justify-content:center;">?</a></p>
-                          <h3 class="card-text mb-3"><strong>R$ <?= !empty($valorTotalParcelas) ? monetarioExibir($valorTotalParcelas) : '--';?></strong></h3>
-                          <p class="text-muted"><?= !empty($totalParcelas) ? $totalParcelas.' parcelas lançadas' : 'Nenhuma parcela lançada'?></p>
+                          <p class="text-muted mb-1">
+                            <i class="fas fa-clock text-info"></i> VALOR A RECEBER
+                          </p>
+                          <h3 class="card-text mb-2"><strong>R$ <?= monetarioExibir($valorTotalAReceber ?? 0)?></strong></h3>
+                          <p class="text-muted mb-0">
+                            <small><?= !empty($totalParcelas) ? $totalParcelas.' parcelas lançadas' : 'Nenhuma parcela lançada'?></small>
+                          </p>
                          </div>
                       </div>
                     </div>
                     <div class="col-md-3">
-                      <div class="card border-info mb-3">     
+                      <div class="card border-success mb-3">     
                         <div class="card-body">
-                          <p class="text-muted">VALOR RECEBIDO <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-0 float-right" title="Ajuda" style="width:17px;height:17px;padding:0;display:inline-flex;align-items:center;justify-content:center;">?</a></p>
-                          <h3 class="card-text mb-3"><strong>R$ 26.101,20</strong></h3>
-                          <p class="text-muted">Nenhuma cobrança recebida</p>
+                          <p class="text-muted mb-1">
+                            <i class="fas fa-check-circle text-success"></i> VALOR RECEBIDO
+                          </p>
+                          <h3 class="card-text mb-2 text-success"><strong>R$ <?= monetarioExibir($valorTotalRecebido ?? 0)?></strong></h3>
+                          <p class="text-muted mb-0">
+                            <small><?= isset($totalParcelasPagas) ? $totalParcelasPagas.' parcela(s) paga(s)' : 'Nenhuma cobrança recebida'?></small>
+                          </p>
                          </div>
                       </div>
                     </div>
                     <div class="col-md-3">
-                      <div class="card border-info mb-3">     
+                      <div class="card border-danger mb-3">     
                         <div class="card-body">
-                          <p class="text-muted">VALOR VENCIDO <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-0 float-right" title="Ajuda" style="width:17px;height:17px;padding:0;display:inline-flex;align-items:center;justify-content:center;">?</a></p>
-                          <h3 class="card-text mb-3"><strong>R$ 26.101,20</strong></h3>
-                          <p class="text-muted">Nenhuma cobrança vencida</p>
+                          <p class="text-muted mb-1">
+                            <i class="fas fa-exclamation-triangle text-danger"></i> VALOR VENCIDO
+                          </p>
+                          <h3 class="card-text mb-2 text-danger"><strong>R$ <?= monetarioExibir($valorTotalVencido ?? 0)?></strong></h3>
+                          <p class="text-muted mb-0">
+                            <small><?= isset($totalParcelasAtrasadas) ? $totalParcelasAtrasadas.' parcela(s) atrasada(s)' : 'Nenhuma cobrança vencida'?></small>
+                          </p>
                          </div>
                       </div>
                     </div>
                   </div>
 
+                  <!-- Barra de Progresso -->
+                  <?php if(isset($valorTotalParcelas) && $valorTotalParcelas > 0): ?>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="mb-2">Progresso de Recebimento</h6>
+                          <?php 
+                            $percentual = percentualPago($valorTotalRecebido ?? 0, $valorTotalParcelas);
+                          ?>
+                          <?= barraProgresso($percentual) ?>
+                          <small class="text-muted">
+                            Recebido: R$ <?= monetarioExibir($valorTotalRecebido ?? 0)?> de R$ <?= monetarioExibir($valorTotalParcelas)?>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <?php endif; ?>
+
+                  <!-- Tabela de Lançamentos -->
                   <div class="row mt-4">
                     <div class="col-12">
                       <div class="card">
                         <div class="card-header">
-                          <h5 class="card-title mb-0">Lançamentos</h5>
+                          <h5 class="card-title mb-0">
+                            <i class="fas fa-list"></i> Lançamentos
+                          </h5>
                         </div>
                         <div class="card-body p-0">
                           <div class="table-responsive">
-                            <table class="table table-striped mb-0">
-                              <thead>
+                            <table class="table table-hover table-striped mb-0">
+                              <thead class="thead-light">
                                 <tr>
+                                  <th width="5%">#</th>
                                   <th>Lançamento</th>
-                                  <th>Nº Parcela</th>
-                                  <th>Data Vencimento</th>
-                                  <th>Valor Parcela</th>
-                                  <th>Data Pagamento</th>
-                                  <th>Forma Pagamento</th>
-                                  <th>Valor Pago</th>
-                                  <th>Status</th>
+                                  <th width="10%">Nº Parcela</th>
+                                  <th width="12%">Vencimento</th>
+                                  <th width="12%">Valor</th>
+                                  <th width="12%">Pago</th>
+                                  <th width="10%">Status</th>
+                                  <th width="15%" class="text-center">Ações</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <?php if (!empty($lancamentos) && is_array($lancamentos)): ?>
                                   <?php foreach ($lancamentos as $l): ?>
-                                    <tr>
-                                      
-                                      <td><?= esc($l->tipo_lancamento) ?></td>
-                                      <td><?= esc($l->numero_parcela) ?></td>
-                                      <td><?= !empty($l->data_vencimento) ? date('d/m/Y', strtotime($l->data_vencimento)) : '--' ?></td>
-                                      <td><?= isset($l->valor_parcela) ? 'R$ ' . number_format((float)$l->valor_parcela, 2, ',', '.') : '--' ?></td>
-                                      <td><?= !empty($l->data_pagamento) ? date('d/m/Y', strtotime($l->data_pagamento)) : '--' ?></td>
-                                      <td><?= esc($l->id_forma_pagamento) ?></td>
-                                      <td><?= isset($l->valor_pago) ? 'R$ ' . number_format((float)$l->valor_pago, 2, ',', '.') : '--' ?></td>
-                                      <td><?= statusContrato(esc($l->status))  ?></td>
+                                    <?php 
+                                      $total_pago_parcela = $l->total_pago ?? 0;
+                                      $valor_restante = $l->valor_parcela - $total_pago_parcela;
+                                      $is_vencido = isVencido($l->data_vencimento);
+                                      $row_class = '';
+                                      if($l->status == 2){
+                                        $row_class = 'table-success';
+                                      } elseif($l->status == 4 || ($is_vencido && $l->status != 2)){
+                                        $row_class = 'table-danger';
+                                      } elseif($l->status == 3){
+                                        $row_class = 'table-warning';
+                                      }
+                                    ?>
+                                    <tr class="<?= $row_class ?>">
+                                      <td><?= $l->id ?></td>
+                                      <td>
+                                        <strong><?= esc($l->tipo_lancamento) ?></strong>
+                                        <?php if($is_vencido && $l->status != 2): ?>
+                                          <br><small class="text-danger">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                            <?= textoVencimento($l->data_vencimento) ?>
+                                          </small>
+                                        <?php endif; ?>
+                                      </td>
+                                      <td class="text-center">
+                                        <span class="badge badge-secondary"><?= $l->numero_parcela ?></span>
+                                      </td>
+                                      <td><?= dataBR($l->data_vencimento) ?></td>
+                                      <td><strong>R$ <?= monetarioExibir($l->valor_parcela) ?></strong></td>
+                                      <td>
+                                        <?php if($total_pago_parcela > 0): ?>
+                                          <span class="text-success">R$ <?= monetarioExibir($total_pago_parcela) ?></span>
+                                          <?php if($l->qtd_pagamentos > 1): ?>
+                                            <br><small class="text-muted">(<?= $l->qtd_pagamentos ?> pagamentos)</small>
+                                          <?php endif; ?>
+                                        <?php else: ?>
+                                          <span class="text-muted">--</span>
+                                        <?php endif; ?>
+                                      </td>
+                                      <td><?= badgeStatusParcela($l->status) ?></td>
+                                      <td class="text-center">
+                                        <div class="btn-group btn-group-sm" role="group">
+                                          <?php if($valor_restante > 0): ?>
+                                            <a href="<?= base_url('/Admin/Contrato/registrarPagamento/'.$l->id)?>" 
+                                               class="btn btn-success btn-sm" 
+                                               title="Registrar Pagamento"
+                                               data-toggle="tooltip">
+                                              <i class="fas fa-dollar-sign"></i>
+                                            </a>
+                                          <?php endif; ?>
+                                          <a href="<?= base_url('/Admin/Contrato/detalhesParcela/'.$l->id)?>" 
+                                             class="btn btn-info btn-sm" 
+                                             title="Ver Detalhes"
+                                             data-toggle="tooltip">
+                                            <i class="fas fa-eye"></i>
+                                          </a>
+                                          <?php if($total_pago_parcela == 0): ?>
+                                            <a href="<?= base_url('/Admin/Contrato/excluirParcela/'.$l->id)?>" 
+                                               class="btn btn-danger btn-sm" 
+                                               title="Excluir"
+                                               data-toggle="tooltip"
+                                               onclick="return confirm('Tem certeza que deseja excluir esta parcela?')">
+                                              <i class="fas fa-trash"></i>
+                                            </a>
+                                          <?php endif; ?>
+                                        </div>
+                                      </td>
                                     </tr>
                                   <?php endforeach; ?>
                                 <?php else: ?>
                                   <tr>
-                                    <td colspan="7" class="text-center text-muted">Nenhum lançamento encontrado.</td>
+                                    <td colspan="8" class="text-center text-muted py-4">
+                                      <i class="fas fa-inbox fa-3x mb-3 d-block"></i>
+                                      Nenhum lançamento encontrado.
+                                      <br>
+                                      <a href="<?= base_url('/Admin/Contrato/lancamentos/cadastrar/'.$idContrato)?>" class="btn btn-primary btn-sm mt-2">
+                                        <i class="fas fa-plus"></i> Criar Primeiro Lançamento
+                                      </a>
+                                    </td>
                                   </tr>
                                 <?php endif; ?>
                               </tbody>
@@ -214,4 +310,11 @@ use App\Models\Admin\SI_TurmaModel;
     </section>
     <!-- /.content -->
   </div>
+
+<script>
+// Ativar tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 

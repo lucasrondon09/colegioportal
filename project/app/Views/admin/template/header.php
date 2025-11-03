@@ -32,6 +32,12 @@
 
   <script src="<?= base_url('assets/admin/dist/js/jquery-3.6.0.min.js')?>"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
+ 
+
+
   <link rel="stylesheet" href="https://unpkg.com/dropzone/dist/dropzone.css" />
   <link href="https://unpkg.com/cropperjs/dist/cropper.css" rel="stylesheet"/>
 	<script src="https://unpkg.com/dropzone"></script>

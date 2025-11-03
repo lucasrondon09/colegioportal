@@ -15,6 +15,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+
 <script src="<?= base_url('assets/admin/plugins/jquery/jquery.min.js');?>"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?= base_url('assets/admin/plugins/jquery-ui/jquery-ui.min.js');?>"></script>
@@ -51,6 +52,8 @@
 
 <script src="https://unpkg.com/cropperjs"></script>
 
+<script src="<?= base_url('assets/admin/plugins/jquerymask/jquery.mask.min.js')?>"></script>
+
 
 <script src="<?= base_url('assets/admin/dist/js/pages/footer.js');?>"></script>
 
@@ -59,6 +62,13 @@
 </html>
 
 <script>
+  $(document).ready(function() {
+    $('.money').mask('#.##0,00', { reverse: true });
+  });
+</script>
+
+<script>
+
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()

@@ -23,7 +23,11 @@ class SI_ContratoModel extends Model
 	}	
 
 	public function getContratoById($id){
-		return $this->where('id', $id)->first();
+		return $this->select('si_contrato.*, si_aluno.nome as nome_aluno, si_pai.rm_resp_financeiro_nome as nome_responsavel')
+				->join('si_aluno', 'si_aluno.id = si_contrato.id_aluno')
+				->join('si_pai', 'si_pai.id = si_contrato.id_responsavel')
+				->where('si_contrato.id', $id)
+				->first();
 	}
 
 	public function getContratosByTurma($id_turma){
