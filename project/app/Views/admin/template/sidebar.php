@@ -293,7 +293,12 @@
               <!-- AULA - GERENCIAR -->
 
               <h4 class="text-white mt-4">FINANCEIRO</h4>
-
+              <li class="nav-item">
+                  <a href="<?= base_url('/Admin/Visao-Geral-Financeiro') ?>" class="nav-link">
+                      <i class="fas fa-chart-bar mr-2"></i>
+                      <p>Visão Geral Financeira</p>
+                  </a>
+              </li>
               <li class="nav-item">
                 <a href="<?= base_url('/Admin/Contrato') ?>" class="nav-link">
                   <i class="fas fa-file mr-2"></i>

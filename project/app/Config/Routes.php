@@ -213,6 +213,14 @@ $routes->get('Admin/Contrato/excluirParcela/(:num)', 'Admin\SI_Contrato::excluir
 $routes->get('Admin/Contrato/detalhesParcela/(:num)', 'Admin\SI_Contrato::detalhesParcela/$1');
 
 
+//SI_VisaoGeralFinanceiro - Visão Geral de Lançamentos
+//-------------------------------------------------------------------------
+$routes->get('/Admin/Visao-Geral-Financeiro', 'Admin\SI_VisaoGeralFinanceiro::index');
+$routes->get('/Admin/Visao-Geral-Financeiro/dashboard', 'Admin\SI_VisaoGeralFinanceiro::dashboard');
+$routes->get('/Admin/Visao-Geral-Financeiro/exportar-csv', 'Admin\SI_VisaoGeralFinanceiro::exportarCSV');
+$routes->get('/Admin/Visao-Geral-Financeiro/api/resumo', 'Admin\SI_VisaoGeralFinanceiro::apiResumo');
+
+
 // Formas de Pagamento
 $routes->get('Admin/SI_FormaPagamento', 'Admin\SI_FormaPagamento::index');
 $routes->post('Admin/SI_FormaPagamento', 'Admin\SI_FormaPagamento::index');

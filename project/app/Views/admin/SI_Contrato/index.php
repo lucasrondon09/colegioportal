@@ -67,7 +67,7 @@ $session = \Config\Services::session();
                   </div>
                 </div>
               <?php endif; ?>
-              <table id="registros" class="table table-bordered table-hover mb-3">
+              <table id="registros" class="table table-striped table-hover mb-3">
 
                 <thead>
                   <tr>
@@ -181,7 +181,7 @@ $(document).ready(function(){
     }
 
     var table = $('#registros').DataTable({
-      language: { url: "//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json" },
+      language: { url: "<?= base_url('assets/admin/plugins/datatables-bs5/pt-BR.json')?>" },
       layout: {
         topStart: {
           buttons: [

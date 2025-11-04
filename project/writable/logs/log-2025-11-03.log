@@ -1,0 +1,333 @@
+CRITICAL - 2025-11-03 21:16:29 --> Call to a member function paginate() on null
+in APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-03 21:16:34 --> Call to a member function paginate() on null
+in APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-03 21:17:18 --> Call to a member function paginate() on null
+in APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-03 21:17:38 --> Call to a member function paginate() on null
+in APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-03 21:22:49 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Models\Admin\SI_Parcelas_ContratoModel.php on line 282.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Admin\\SI_Parcelas_ContratoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Admin\\SI_Parcelas_ContratoModel')
+ 3 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Admin\\SI_Parcelas_ContratoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\SI_VisaoGeralFinanceiro->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-11-03 21:25:15 --> mysqli_sql_exception: Column 'status' in field list is ambiguous in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('\n\t\t\tSELECT \n\t\t\t...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT \n\t\t\t...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT \n\t\t\t...')
+#3 C:\wamp64\www\portal\project\app\Models\Admin\SI_Parcelas_ContratoModel.php(463): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT \n\t\t\t...')
+#4 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_VisaoGeralFinanceiro.php(58): App\Models\Admin\SI_Parcelas_ContratoModel->getResumoFinanceiroGeral(Array)
+#5 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+#6 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-11-03 21:25:15 --> Column 'status' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		')
+ 4 APPPATH\Models\Admin\SI_Parcelas_ContratoModel.php(463): CodeIgniter\Database\BaseConnection->query('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		')
+ 5 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(58): App\Models\Admin\SI_Parcelas_ContratoModel->getResumoFinanceiroGeral([])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-11-03 21:30:08 --> mysqli_sql_exception: Column 'status' in field list is ambiguous in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('\n\t\t\tSELECT \n\t\t\t...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT \n\t\t\t...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT \n\t\t\t...')
+#3 C:\wamp64\www\portal\project\app\Models\Admin\SI_Parcelas_ContratoModel.php(463): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT \n\t\t\t...')
+#4 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_VisaoGeralFinanceiro.php(58): App\Models\Admin\SI_Parcelas_ContratoModel->getResumoFinanceiroGeral(Array)
+#5 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+#6 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-11-03 21:30:08 --> Column 'status' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		')
+ 4 APPPATH\Models\Admin\SI_Parcelas_ContratoModel.php(463): CodeIgniter\Database\BaseConnection->query('
+			SELECT 
+				COUNT(CASE WHEN status = 1 THEN 1 END) as abertos,
+				COUNT(CASE WHEN status = 2 THEN 1 END) as pagos,
+				COUNT(CASE WHEN status = 3 THEN 1 END) as parcialmente_pagos,
+				COUNT(CASE WHEN status = 4 THEN 1 END) as atrasados
+			FROM si_parcelas_contrato
+			LEFT JOIN si_contrato ON si_contrato.id = si_parcelas_contrato.id_contrato
+			LEFT JOIN si_aluno ON si_aluno.id = si_contrato.id_aluno
+			LEFT JOIN si_turma ON si_turma.id = si_contrato.id_turma
+			LEFT JOIN si_pai ON si_pai.id = si_contrato.id_responsavel
+			WHERE si_parcelas_contrato.deleted_at IS NULL
+			  
+		')
+ 5 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(58): App\Models\Admin\SI_Parcelas_ContratoModel->getResumoFinanceiroGeral([])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-11-03 21:32:19 --> mysqli_sql_exception: Not unique table/alias: 'si_contrato' in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\portal\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\portal\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_VisaoGeralFinanceiro.php(69): CodeIgniter\BaseModel->paginate(25)
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+#9 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-11-03 21:32:19 --> Not unique table/alias: 'si_contrato'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(69): CodeIgniter\BaseModel->paginate(25)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-11-03 21:34:44 --> mysqli_sql_exception: Not unique table/alias: 'si_contrato' in C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\portal\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\portal\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\portal\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\portal\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\portal\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\portal\project\app\Controllers\Admin\SI_VisaoGeralFinanceiro.php(69): CodeIgniter\BaseModel->paginate(25)
+#7 C:\wamp64\www\portal\project\system\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+#8 C:\wamp64\www\portal\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+#9 C:\wamp64\www\portal\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\portal\index.php(72): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-11-03 21:34:44 --> Not unique table/alias: 'si_contrato'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `si_parcelas_contrato`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+LEFT JOIN `si_contrato` ON `si_contrato`.`id` = `si_parcelas_contrato`.`id_contrato`
+LEFT JOIN `si_aluno` ON `si_aluno`.`id` = `si_contrato`.`id_aluno`
+LEFT JOIN `si_turma` ON `si_turma`.`id` = `si_contrato`.`id_turma`
+LEFT JOIN `si_pai` ON `si_pai`.`id` = `si_contrato`.`id_responsavel`
+LEFT JOIN `si_tipo_lancamento` ON `si_tipo_lancamento`.`id` = `si_parcelas_contrato`.`tipo_lancamento`
+WHERE `si_parcelas_contrato`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(69): CodeIgniter\BaseModel->paginate(25)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()

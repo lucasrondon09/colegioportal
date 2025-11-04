@@ -1,0 +1,22 @@
+CRITICAL - 2025-11-04 09:00:08 --> Undefined variable $lanc
+in APPPATH\Views\admin\SI_VisaoGeralFinanceiro\index.php on line 2.
+ 1 APPPATH\Views\admin\SI_VisaoGeralFinanceiro\index.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lanc', 'APPPATH\\Views\\admin\\SI_VisaoGeralFinanceiro\\index.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_VisaoGeralFinanceiro\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_VisaoGeralFinanceiro/index', [], true)
+ 5 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(98): view('admin/SI_VisaoGeralFinanceiro/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-04 09:00:12 --> Undefined variable $lanc
+in APPPATH\Views\admin\SI_VisaoGeralFinanceiro\index.php on line 2.
+ 1 APPPATH\Views\admin\SI_VisaoGeralFinanceiro\index.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lanc', 'APPPATH\\Views\\admin\\SI_VisaoGeralFinanceiro\\index.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\SI_VisaoGeralFinanceiro\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/SI_VisaoGeralFinanceiro/index', [], true)
+ 5 APPPATH\Controllers\Admin\SI_VisaoGeralFinanceiro.php(98): view('admin/SI_VisaoGeralFinanceiro/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\SI_VisaoGeralFinanceiro->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SI_VisaoGeralFinanceiro))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(72): CodeIgniter\CodeIgniter->run()
