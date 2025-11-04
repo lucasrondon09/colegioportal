@@ -16,7 +16,7 @@ use App\Models\Admin\SI_TurmaModel;
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Contrato - Lançamentos</h1>
+            <h1>Lançamentos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -36,14 +36,6 @@ use App\Models\Admin\SI_TurmaModel;
           <div class="col-md-12">
             <!-- jquery validation -->
             <div class="card">
-              <h3 class="card-title mt-3 ml-3">
-                <a href="javascript:history.back()" class="text-decoration-none text-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-                </a>
-                Dados do Contrato
-              </h3>
               <!-- form start -->
               <?php
 
@@ -89,19 +81,30 @@ use App\Models\Admin\SI_TurmaModel;
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-12">
-                      <h3><?= $contrato->aluno_nome?>
-                      <span class="float-right">
-                        <a href="<?= base_url('/Admin/Contrato/lancamentos/cadastrar/'.$idContrato)?>" class="btn btn-info">
-                          <i class="fas fa-plus fa-fw"></i>
-                          Novo Lançamento
-                        </a>
-                      </span>
-                      </h3>
-                      <h6 class="text-muted"><span class="font-weight-bold"><?= $contrato->turma_nome?> <?= getPeriodo($contrato->id_periodo)?></span></h6>
-                        <h6 class="text-muted"><span class="font-weight-bold"> Responsável Financeiro: </span><?= $contrato->responsavel_nome?></h6>
-                      <h6 class="text-muted"><span class="font-weight-bold"> Situação: </span><?= !empty($contrato->status) ? statusContrato($contrato->status) : '--';?></h6>
-                      <h6 class="text-muted"><span class="font-weight-bold"> Tipo Matricula: </span><?= !empty($contrato->tipo_contrato) ? tipoContrato($contrato->tipo_contrato) : '--';?></h6>
-                      <h6 class="text-muted"><span class="font-weight-bold"> Data: </span><?= !empty($contrato->data_inicio) ? dataBR($contrato->data_inicio) : '--';?> <?= !empty($contrato->data_fim) ? 'à '.dataBR($contrato->data_fim) : '--';?></h6>
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title">
+                            <a href="javascript:history.back()" class="text-decoration-none text-dark">
+                              <i class="fas fa-chevron-left"></i>
+                            </a>
+                            Informações do Contrato
+                          </h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <p class="mb-2"><strong>Aluno:</strong> <?= $contrato->aluno_nome ?></p>
+                              <p class="mb-2"><strong>Responsável Financeiro:</strong> <?= $contrato->responsavel_nome ?></p>
+                              <p class="mb-2"><strong>Tipo:</strong> <?= !empty($contrato->tipo_contrato) ? tipoContrato($contrato->tipo_contrato) : '--';?></p>
+                            </div>
+                            <div class="col-md-6">
+                              <p class="mb-2"><strong>Contrato:</strong> #<?= $contrato->id ?></p>
+                              <p class="mb-2"><strong>Status:</strong> <?= statusContrato($contrato->status) ?></p>
+                              <p class="mb-2"><strong>Data:</strong> <?= !empty($contrato->data_inicio) ? dataBR($contrato->data_inicio) : '--';?> <?= !empty($contrato->data_fim) ? 'à '.dataBR($contrato->data_fim) : '--';?></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
@@ -180,6 +183,29 @@ use App\Models\Admin\SI_TurmaModel;
                     </div>
                   </div>
                   <?php endif; ?>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <a href="<?= base_url('/Admin/Contrato/lancamentos/cadastrar/'.$idContrato)?>" class="btn btn-info">
+                            <i class="fas fa-plus fa-fw"></i>
+                            Novo Lançamento
+                          </a>
+                          <a href="<?= base_url('/Admin/Contrato/editar/'.$contrato->id_turma.'/'.$contrato->aluno_id)?>" class="btn btn-primary">
+                            <i class="fas fa-edit fa-fw"></i>
+                            Editar Contrato
+                          </a>
+                          <span class="float-right">
+                            <a href="<?= base_url('/Admin/Contrato/editar/'.$contrato->id_turma.'/'.$contrato->aluno_id)?>" class="btn btn-danger">
+                                <i class="fas fa-trash fa-fw"></i>
+                              Excluir Contrato
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                   <!-- Tabela de Lançamentos -->
                   <div class="row mt-4">

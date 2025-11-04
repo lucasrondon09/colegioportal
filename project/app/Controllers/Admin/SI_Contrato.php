@@ -257,6 +257,7 @@ class SI_Contrato extends Controller
             $rules = $this->validation->setRules([
                 'tipo_lancamento'      => ['label' => 'Tipo de Lançamento', 'rules' => 'required'],
                 'parcelas'             => ['label' => 'Parcelas', 'rules' => 'required'],
+                'data_emissao'         => ['label' => 'Data da Emissão', 'rules' => 'required'],
                 'data_vencimento'      => ['label' => 'Data de Vencimento', 'rules' => 'required'],
                 'valor_parcela'        => ['label' => 'Valor da Parcela', 'rules' => 'required'],
             ]);
@@ -265,6 +266,7 @@ class SI_Contrato extends Controller
 
                 $fields =     $this->request->getVar();
                 $valor_parcela = number_format((float)preg_replace('/[^\d]/', '', $fields['valor_parcela']) / 100, 2, '.', '');
+                $data_emissao = new \DateTime($fields['data_emissao']);
                 $data_vencimento = new \DateTime($fields['data_vencimento']);
 
                 for ($i = 0; $i < (int)$fields['parcelas']; $i++) {
@@ -276,11 +278,13 @@ class SI_Contrato extends Controller
                         'id_contrato'       => $id_contrato,
                         'tipo_lancamento'   => $fields['tipo_lancamento'],
                         'numero_parcela'    => $i + 1,
+                        'data_emissao'      => $data_emissao->format('Y-m-d'),
                         'data_vencimento'   => $data_parcela->format('Y-m-d'),
                         'valor_parcela'     => $valor_parcela,
                         'status'            => 1, // Aberto
                         'data_pagamento'    => null,
                         'valor_pago'        => null,
+                        'descricao'        => $fields['descricao' ?? null]
                     ];
                     
 
