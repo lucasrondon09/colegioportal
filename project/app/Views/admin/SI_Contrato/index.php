@@ -114,6 +114,9 @@ $session = \Config\Services::session();
                     <td>R$ <?= monetarioExibir($tableItem->valor_total) ?></td>
                     <td><span class="badge <?= $badgeClass ?>"><?= statusContrato($tableItem->status) ?></span></td>
                     <td class="text-center" name="acoes">
+                      <a href="<?= base_url('Admin/Contrato/editar/'.$tableItem->id_turma.'/'.$tableItem->id_aluno); ?>" class="btn btn-sm btn-outline-secondary mr-1" data-toggle="tooltip" data-placement="top" title="Editar">
+                        <i class="fas fa-edit"></i>
+                      </a>
                     <a href="<?= base_url('Admin/Contrato/lancamentos/'.$tableItem->id); ?>" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Visualizar">
                     <i class="fas fa-arrow-right"></i>
                     </a>

@@ -203,6 +203,7 @@ $routes->add('/Admin/Turma/alunos/contrato/save', 'Admin\SI_Contrato::save');
 $routes->add('/Admin/Contrato', 'Admin\SI_Contrato::index');
 $routes->add('/Admin/Contrato/save', 'Admin\SI_Contrato::save');
 $routes->add('/Admin/Contrato/update/(:num)', 'Admin\SI_Contrato::update/$1');
+$routes->add('/Admin/Contrato/editar/(:num)/(:num)', 'Admin\SI_Contrato::create/$1/$2');
 $routes->add('/Admin/Contrato/lancamentos/(:num)', 'Admin\SI_Contrato::lancamentos/$1');
 $routes->add('/Admin/Contrato/lancamentos/cadastrar/(:num)', 'Admin\SI_Contrato::lancamentosCadastrar/$1');
 $routes->add('/Admin/Contrato/lancamentos/salvar/(:num)', 'Admin\SI_Contrato::lancamentosSalvar/$1');

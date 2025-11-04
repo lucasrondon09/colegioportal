@@ -7,7 +7,7 @@ class SI_Parcelas_ContratoModel extends Model
 
     protected $table = 'si_parcelas_contrato';
 	protected $primaryKey = 'id';
-	protected $allowedFields = ['id_contrato', 'tipo_lancamento', 'numero_parcela', 'data_vencimento', 'valor_parcela', 'valor_desconto', 'valor_juros', 'valor_multa', 'status'];
+	protected $allowedFields = ['id_contrato', 'tipo_lancamento', 'numero_parcela', 'descricao', 'data_emissao', 'data_vencimento', 'valor_parcela', 'valor_desconto', 'valor_juros', 'valor_multa', 'status'];
 	
 	protected $returnType     = 'object';
     protected $useSoftDeletes = true;

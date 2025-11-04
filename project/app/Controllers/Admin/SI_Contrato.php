@@ -50,6 +50,7 @@ class SI_Contrato extends Controller
 
         $this->data['table'] = $contratos;
 
+
         echo view('admin/template/header.php');
         echo view('admin/template/sidebar.php');
         echo view('admin/SI_Contrato/index.php', $this->data);
@@ -186,7 +187,7 @@ class SI_Contrato extends Controller
 
         // Dados do contrato
         $this->data['contrato'] = $this->contratoModel
-            ->select('si_contrato.*, si_aluno.nome as aluno_nome, si_pai.rm_resp_financeiro_nome as responsavel_nome, si_turma.nome as turma_nome, si_turma.ano as turma_ano, si_turma.id_periodo as id_periodo')
+            ->select('si_contrato.*, si_aluno.nome as aluno_nome, si_aluno.id as aluno_id, si_pai.rm_resp_financeiro_nome as responsavel_nome, si_turma.nome as turma_nome, si_turma.id as turma_id,si_turma.ano as turma_ano, si_turma.id_periodo as id_periodo')
             ->join('si_aluno', 'si_aluno.id = si_contrato.id_aluno', 'left')
             ->join('si_turma', 'si_turma.id = si_contrato.id_turma', 'left')
             ->join('si_pai', 'si_pai.id = si_contrato.id_responsavel', 'left')
@@ -273,7 +274,6 @@ class SI_Contrato extends Controller
 
                     $lancamento = [
                         'id_contrato'       => $id_contrato,
-                        'id_forma_pagamento' => 1,
                         'tipo_lancamento'   => $fields['tipo_lancamento'],
                         'numero_parcela'    => $i + 1,
                         'data_vencimento'   => $data_parcela->format('Y-m-d'),
@@ -282,6 +282,7 @@ class SI_Contrato extends Controller
                         'data_pagamento'    => null,
                         'valor_pago'        => null,
                     ];
+                    
 
                     $this->parcelaModel->insert($lancamento);
                 }

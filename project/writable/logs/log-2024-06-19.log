@@ -1,8 +1,0 @@
-CRITICAL - 2024-06-19 08:50:37 --> default is not a valid database connection group.
-in SYSTEMPATH\Database\Config.php on line 70.
- 1 SYSTEMPATH\Model.php(154): CodeIgniter\Database\Config::connect('default')
- 2 APPPATH\Controllers\Admin\Galeria.php(21): CodeIgniter\Model->__construct()
- 3 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Galeria->__construct()
- 4 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
- 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 6 FCPATH\index.php(71): CodeIgniter\CodeIgniter->run()
