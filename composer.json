@@ -1,0 +1,10 @@
+{
+    "require": {
+        "cweagans/composer-patches": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "cweagans/composer-patches": true
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "rondon/project",
+    "autoload": {
+        "psr-4": {
+            "Rondon\\Project\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2",
+        "eduardokum/laravel-boleto": "^0.10.1",
+        "cweagans/composer-patches": "^1.7"
+    },
+    "extra": {
+        "patches": {
+            "eduardokum/laravel-boleto": {
+                "Fix PHP 8.3 compatibility for count() method": "patches/laravel-boleto-php83-fix.patch"
+            }
+        }
+    }
+}

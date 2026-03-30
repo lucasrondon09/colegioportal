@@ -1,0 +1,237 @@
+#azul {
+  background-color: royalblue;
+  height: 60px; }
+
+#vermelho {
+  background-color: darkred;
+  height: 60px; }
+
+#verde {
+  background-color: forestgreen;
+  height: 60px; }
+
+#preto {
+  background-color: black;
+  height: 60px; }
+
+#amarelo {
+  background-color: goldenrod;
+  height: 60px; }
+
+#amareloLG {
+  background-color: goldenrod;
+  height: 60px; }
+
+#amareloSM {
+  background-color: goldenrod;
+  height: 60px; }
+
+#container {
+  width: 100px;
+  height: 100px;
+  position: relative; }
+
+#navi,
+#infoi {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#infoi {
+  z-index: 10; }
+
+.bordamenu {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 78px;
+  margin: 0px;
+  font-weight: bold;
+  color: #797979;
+  display: inline-block;
+  font-size: 15px; }
+
+.bordamenu span {
+  padding-left: 2px;
+  border-left: 2px solid #797979; }
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+.linka a:hover {
+  text-decoration: none; }
+
+.linka a:hover div {
+  text-decoration: underline;
+  color: #E11C1C; }
+
+#opcoes_acesso div {
+  display: block;
+  background-color: #989696;
+  text-align: center;
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 1px;
+  font-size: 12px; }
+
+#opcoes_acesso a {
+  color: #fff; }
+
+#opcoes_acesso a:hover {
+  text-decoration: none;
+  color: #fff; }
+
+#opcoes_acesso a div:hover {
+  text-decoration: underline;
+  color: #fff; }
+
+.corpo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.home_direita_cinza {
+  position: absolute;
+  color: #555;
+  top: 431px;
+  left: 827px;
+  font-size: 18px;
+  text-align: right;
+  width: 0px;
+  font-weight: bold; }
+
+.home_direita_cinza .texto {
+  color: #333;
+  margin-top: 15px;
+  font-size: 11px; }
+
+#trapezoid {
+  border-bottom: 100px solid red;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 50px;
+  width: 150px; }
+
+.shaped {
+  /*...*/
+  mask-image: linear-gradient(black 0%, transparent 100%);
+  border: 1px solid #000; }
+
+body,
+html {
+  margin: 0; }
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  /* flex-direction: column; */
+  margin: 0;
+  background-color: #F2F2F2; }
+
+.pond {
+  /* flex:1 */ }
+
+.pond1 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#D7E3EA+0,1e5799+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e6812f+0,b26324+100 */
+  background: #e6812f;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #e6812f 0%, #b26324 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #e6812f 0%, #b26324 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #e6812f 0%, #b26324 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6812f', endColorstr='#b26324',GradientType=1 );
+  /* IE6-9 */
+  /* IE6-9 */
+  width: 100px; }
+
+.pond2 div.largura1300 {
+  width: 1300px; }
+
+.pond3 {
+  width: 100px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b26324+0,e6812f+100 */
+  background: #b26324;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #b26324 0%, #e6812f 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #b26324 0%, #e6812f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #b26324 0%, #e6812f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b26324', endColorstr='#e6812f', GradientType=1);
+  /* IE6-9 */ }
+
+.frog0 {
+  flex: 1;
+  background-color: #e6812f; }
+
+.frog4 {
+  flex: 1;
+  background-color: #e6812f; }
+
+.titulo_modalidade {
+  font-size: 25px;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+
+.titulo_modalidade2 {
+  font-size: 25px;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+
+.div_voltar a {
+  color: #fff; }
+
+.bloco_modalidade .texto_modalidade {
+  font-size: 16px; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */ }
+
+.radar_home a {
+  color: #fff; }
+
+.radar_home a:hover {
+  text-decoration: none; }
+
+@font-face {
+  font-family: HelveticaLTStdRoman;
+  src: url("Fontes/HelveticaLTStd-Roman.otf") format("opentype"); }
+
+@font-face {
+  font-family: HelveticaLTStdCondensed;
+  src: url("Fontes/HelveticaLTStd-Cond_0.otf") format("opentype"); }
+
+.mobile_pagina {
+  background-color: #E5003E;
+  color: #fff;
+  position: relative;
+  padding: 20px;
+  position: relative;
+  font-size: 13px;
+  font-family: Verdana, Geneva, sans-serif; }
+  .mobile_pagina .titulo_modalidade {
+    padding-bottom: 50px; }
+
+

@@ -1,0 +1,46 @@
+--- a/src/Cnab/Retorno/AbstractRetorno.php
++++ b/src/Cnab/Retorno/AbstractRetorno.php
+@@ -247,30 +247,37 @@ abstract class AbstractRetorno implements \Countable, \SeekableIterator
+     }
+ 
+ 
++    #[\ReturnTypeWillChange]
+     public function current()
+     {
+         return $this->detalhe[$this->_position];
+     }
+ 
++    #[\ReturnTypeWillChange]
+     public function next()
+     {
+         ++$this->_position;
+     }
+ 
++    #[\ReturnTypeWillChange]
+     public function key()
+     {
+         return $this->_position;
+     }
+ 
++    #[\ReturnTypeWillChange]
+     public function valid()
+     {
+         return isset($this->detalhe[$this->_position]);
+     }
+ 
++    #[\ReturnTypeWillChange]
+     public function rewind()
+     {
+         $this->_position = 1;
+     }
+ 
++    #[\ReturnTypeWillChange]
+     public function count()
+     {
+         return count($this->detalhe);
+     }
+ 
++    #[\ReturnTypeWillChange]
+     public function seek($position)
+     {
+         $this->_position = $position;
