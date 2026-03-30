@@ -514,20 +514,81 @@ class CnabService
     }
 
     /**
-     * Buscar dados do pagador
+     * Buscar dados do pagador (responsável financeiro) a partir do id_contrato
+     * Busca na tabela si_contrato -> si_pai (responsável financeiro)
      */
     private function buscarDadosPagador(int $idContrato): array
     {
-        // Por enquanto, retornar dados padrão
-        // TODO: Integrar com tabela de alunos/responsáveis quando disponível
+        try {
+            // Buscar contrato com dados do responsável
+            $contrato = $this->db->table('si_contrato')
+                ->select('si_contrato.id_responsavel, si_pai.rm_resp_financeiro_nome as nome, si_pai.rm_resp_financeiro_cpf as cpf, si_pai.rm_resp_financeiro_endereco_correspondencia as endereco, si_pai.rm_resp_financeiro_bairro as bairro, si_pai.rm_resp_financeiro_cep as cep, si_pai.rm_resp_financeiro_cidade_estado as cidade_estado, si_pai.cpf_pai, si_pai.nome_pai, si_pai.end_pai, si_pai.bairro_pai, si_pai.cid_pai, si_pai.uf_pai')
+                ->join('si_pai', 'si_pai.id = si_contrato.id_responsavel')
+                ->where('si_contrato.id', $idContrato)
+                ->get()->getRowArray();
+
+            if (!$contrato) {
+                return $this->dadosPagadorPadrao($idContrato);
+            }
+
+            // Priorizar dados do responsável financeiro, fallback para dados do pai
+            $nome = !empty($contrato['nome']) ? $contrato['nome'] : ($contrato['nome_pai'] ?? 'Não informado');
+            $cpf  = !empty($contrato['cpf'])  ? preg_replace('/\D/', '', $contrato['cpf']) : preg_replace('/\D/', '', $contrato['cpf_pai'] ?? '');
+
+            // Endereço: priorizar endereço de correspondência do resp. financeiro
+            $endereco = !empty($contrato['endereco']) ? $contrato['endereco'] : ($contrato['end_pai'] ?? '');
+            $bairro   = !empty($contrato['bairro'])   ? $contrato['bairro']   : ($contrato['bairro_pai'] ?? '');
+
+            // CEP: remover traço e separar prefixo (5 dígitos) e sufixo (3 dígitos)
+            $cepRaw = preg_replace('/\D/', '', $contrato['cep'] ?? '');
+            if (empty($cepRaw) || strlen($cepRaw) < 5) {
+                $cepRaw = '00000000';
+            }
+            $cepPrefixo = str_pad(substr($cepRaw, 0, 5), 5, '0', STR_PAD_LEFT);
+            $cepSufixo  = str_pad(substr($cepRaw, 5, 3), 3, '0', STR_PAD_LEFT);
+
+            // Cidade e UF: campo cidade_estado pode vir como "Cuiabá/MT" ou separado
+            $cidade = $contrato['cid_pai'] ?? '';
+            $uf     = $contrato['uf_pai'] ?? 'MT';
+            if (!empty($contrato['cidade_estado'])) {
+                $partes = explode('/', $contrato['cidade_estado']);
+                $cidade = trim($partes[0] ?? $cidade);
+                $uf     = trim($partes[1] ?? $uf);
+            }
+
+            return [
+                'nome'          => $nome,
+                'cpf'           => $cpf ?: '00000000000',
+                'endereco'      => $endereco ?: 'Não informado',
+                'bairro'        => $bairro ?: 'Não informado',
+                'cep'           => $cepPrefixo . $cepSufixo,
+                'cep_prefixo'   => $cepPrefixo,
+                'cep_sufixo'    => $cepSufixo,
+                'uf'            => $uf ?: 'MT',
+                'cidade'        => $cidade ?: 'Não informado',
+            ];
+
+        } catch (\Exception $e) {
+            log_message('warning', '[CNAB REMESSA] Erro ao buscar pagador do contrato #' . $idContrato . ': ' . $e->getMessage());
+            return $this->dadosPagadorPadrao($idContrato);
+        }
+    }
+
+    /**
+     * Retorna dados padrão para o pagador quando não encontrado
+     */
+    private function dadosPagadorPadrao(int $idContrato): array
+    {
         return [
-            'nome'     => 'Pagador - Contrato #' . $idContrato,
-            'cpf'      => '00000000000',
-            'endereco' => 'Rua Exemplo, 123',
-            'bairro'   => 'Centro',
-            'cep'      => '00000000',
-            'uf'       => 'SP',
-            'cidade'   => 'São Paulo',
+            'nome'          => 'Pagador - Contrato #' . $idContrato,
+            'cpf'           => '00000000000',
+            'endereco'      => 'Nao informado',
+            'bairro'        => 'Nao informado',
+            'cep'           => '00000000',
+            'cep_prefixo'   => '00000',
+            'cep_sufixo'    => '000',
+            'uf'            => 'MT',
+            'cidade'        => 'Nao informado',
         ];
     }
 
@@ -607,9 +668,15 @@ class CnabService
     }
 
     /**
-     * Corrigir layout CNAB 240 para garantir 240 caracteres por linha
+     * Corrigir layout CNAB 240 para garantir 240 caracteres por linha e corrigir campos
+     * conforme exigências da Caixa Econômica Federal:
+     * - Seg P pos 074-077: Uso Exclusivo Caixa deve ser BRANCOS (não 3103)
+     * - Seg P pos 078-085: Data vencimento correta (DDMMAAAA)
+     * - Seg P pos 086-100: Valor do título com centavos corretos
+     * - Seg P pos 107-108: Espécie 02 (DM - Duplicata Mercantil)
      * 
      * @param string $caminhoArquivo
+     * @param array  $boletos
      * @return void
      */
     private function corrigirLayoutCnab240(string $caminhoArquivo, array $boletos): void
@@ -617,15 +684,15 @@ class CnabService
         // Ler arquivo
         $conteudo = file_get_contents($caminhoArquivo);
         
-        // Separar linhas
-        $linhas = explode("\n", $conteudo);
+        // Separar linhas (suporta \r\n e \n)
+        $linhas = preg_split('/\r?\n/', $conteudo);
         
         // Corrigir cada linha
         $linhasCorrigidas = [];
         $indiceBoleto = 0;
         
         foreach ($linhas as $linha) {
-            // Remover quebras de linha
+            // Remover quebras de linha residuais
             $linha = rtrim($linha, "\r\n");
             
             // Pular linhas vazias
@@ -633,26 +700,37 @@ class CnabService
                 continue;
             }
             
-            // Identificar tipo de registro (posição 8)
+            // Identificar tipo de registro (posição 8, índice 7)
             $tipoRegistro = isset($linha[7]) ? $linha[7] : '';
-            $segmento = isset($linha[13]) ? $linha[13] : '';
+            $segmento     = isset($linha[13]) ? $linha[13] : '';
             
-            // Se for Segmento P, corrigir campos
+            // -------------------------------------------------------
+            // Segmento P: corrigir campos críticos
+            // -------------------------------------------------------
             if ($tipoRegistro == '3' && $segmento == 'P' && isset($boletos[$indiceBoleto])) {
                 $boleto = $boletos[$indiceBoleto];
                 
-                // Corrigir data de vencimento (posições 74-81, índices 73-80)
-                $vencimento = date('dmY', strtotime($boleto['vencimento']));
-                $linha = substr_replace($linha, $vencimento, 73, 8);
+                // Campo 19.3P (pos 074-077, índices 73-76): Uso Exclusivo Caixa → BRANCOS
+                $linha = substr_replace($linha, '    ', 73, 4);
                 
-                // Corrigir valor (posições 87-101, índices 86-100)
-                $valor = str_pad(number_format($boleto['valor'] * 100, 0, '', ''), 15, '0', STR_PAD_LEFT);
-                $linha = substr_replace($linha, $valor, 86, 15);
+                // Campo 20.3P (pos 078-085, índices 77-84): Data vencimento (DDMMAAAA)
+                $vencimento = date('dmY', strtotime($boleto['vencimento']));
+                $linha = substr_replace($linha, $vencimento, 77, 8);
+                
+                // Campo 21.3P (pos 086-100, índices 85-99): Valor do título (centavos, 15 dígitos)
+                // Multiplicar por 100 para converter reais em centavos e formatar sem decimais
+                $valorCentavos = (int) round((float) $boleto['valor'] * 100);
+                $valorFormatado = str_pad((string) $valorCentavos, 15, '0', STR_PAD_LEFT);
+                $linha = substr_replace($linha, $valorFormatado, 85, 15);
+                
+                // Campo 24.3P (pos 107-108, índices 106-107): Espécie → 02 (DM - Duplicata Mercantil)
+                // A biblioteca mapeia DM→01 (Cheque), mas a Caixa exige 02 (DM)
+                $linha = substr_replace($linha, '02', 106, 2);
                 
                 $indiceBoleto++;
             }
             
-            // Ajustar para 240 caracteres
+            // Ajustar para exatamente 240 caracteres
             if (strlen($linha) < 240) {
                 $linha = str_pad($linha, 240, ' ', STR_PAD_RIGHT);
             } elseif (strlen($linha) > 240) {
@@ -662,7 +740,7 @@ class CnabService
             $linhasCorrigidas[] = $linha;
         }
         
-        // Salvar arquivo corrigido
-        file_put_contents($caminhoArquivo, implode("\n", $linhasCorrigidas) . "\n");
+        // Salvar arquivo corrigido com quebra de linha padrão Unix
+        file_put_contents($caminhoArquivo, implode("\r\n", $linhasCorrigidas) . "\r\n");
     }
 }
