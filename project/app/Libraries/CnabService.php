@@ -148,27 +148,39 @@ class CnabService
                     'documento' => $pagador['cpf'] ?? '00000000000',
                 ]);
 
+                // Configurações de multa, juros e prazo de baixa
+                // Caixa exige: juros 1% ao mês, multa 2%, não receber após 90 dias
+                $multaPercentual    = (float) ($parcela['multa_percentual'] ?? 2.00);
+                $jurosPercentual    = (float) ($parcela['juros_percentual'] ?? 1.00);
+                $naoReceberAposDias = (int)   ($parcela['nao_receber_apos_dias'] ?? 90);
+                // Garantir mínimo de 90 dias conforme instrução da Caixa
+                if ($naoReceberAposDias <= 0) {
+                    $naoReceberAposDias = 90;
+                }
+
                 // Criar boleto para remessa
                 $boleto = new \Eduardokum\LaravelBoleto\Boleto\Banco\Caixa([
-                    'logo'                => FCPATH . 'assets/img/logo-caixa.png',
-                    'dataVencimento'      => new \Carbon\Carbon($parcela['data_vencimento']),
-                    'valor'               => (float) $parcela['valor_parcela'],
-                    'multa'               => (float) ($parcela['multa_percentual'] ?? 2.00),
-                    'juros'               => (float) ($parcela['juros_percentual'] ?? 1.00),
-                    'numero'              => $parcela['id'],
-                    'numeroDocumento'     => str_pad($parcela['id'], 10, '0', STR_PAD_LEFT),
-                    'pagador'             => $pagadorObj,
-                    'beneficiario'        => $beneficiario,
-                    'carteira'            => $this->config['carteira'],
-                    'agencia'             => $this->config['agencia'],
-                    'agenciaDv'           => $this->config['agencia_dv'],
-                    'conta'               => $this->config['conta'],
-                    'contaDv'             => $this->config['conta_dv'],
-                    'codigoCliente'       => $this->config['codigo_beneficiario'],
+                    'logo'                   => FCPATH . 'assets/img/logo-caixa.png',
+                    'dataVencimento'         => new \Carbon\Carbon($parcela['data_vencimento']),
+                    'valor'                  => (float) $parcela['valor_parcela'],
+                    'multa'                  => $multaPercentual,
+                    'juros'                  => $jurosPercentual,
+                    'numero'                 => $parcela['id'],
+                    'numeroDocumento'        => str_pad($parcela['id'], 10, '0', STR_PAD_LEFT),
+                    'pagador'                => $pagadorObj,
+                    'beneficiario'           => $beneficiario,
+                    'carteira'               => $this->config['carteira'],
+                    'agencia'                => $this->config['agencia'],
+                    'agenciaDv'              => $this->config['agencia_dv'],
+                    'conta'                  => $this->config['conta'],
+                    'contaDv'                => $this->config['conta_dv'],
+                    'codigoCliente'          => $this->config['codigo_beneficiario'],
                     'descricaoDemonstrativo' => ['Mensalidade escolar - Parcela ' . $parcela['numero_parcela']],
-                    'instrucoes'          => $this->gerarInstrucoes($parcela),
-                    'aceite'              => $parcela['aceite'] ?? 'N',
-                    'especieDoc'          => $parcela['tipo_titulo'] ?? 'DM',
+                    'instrucoes'             => $this->gerarInstrucoes($parcela),
+                    'aceite'                 => $parcela['aceite'] ?? 'N',
+                    'especieDoc'             => $parcela['tipo_titulo'] ?? 'DM',
+                    // Prazo para baixa automática conforme instrução da Caixa: 90 dias
+                    'diasBaixaAutomatica'    => $naoReceberAposDias,
                 ]);
 
                 // Adicionar boleto à remessa
