@@ -8,6 +8,11 @@ class CreateBoletoConfig extends Migration
 {
     public function up()
     {
+        // Se a tabela já existe, pular a criação (evita erro ao rodar migrate em banco existente)
+        if ($this->db->tableExists('si_boleto_config')) {
+            return;
+        }
+
         $this->forge->addField([
             'id' => [
                 'type'           => 'INT',
