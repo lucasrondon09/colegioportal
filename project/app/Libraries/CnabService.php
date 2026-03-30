@@ -152,8 +152,8 @@ class CnabService
 
                 // Configurações de multa, juros e prazo de baixa
                 // Caixa exige: juros 1% ao mês, multa 2%, não receber após 90 dias
-                $multaPercentual    = (float) ($parcela['multa_percentual'] ?? 2.00);
-                $jurosPercentual    = (float) ($parcela['juros_percentual'] ?? 1.00);
+                $multaPercentual    = round((float) ($parcela['multa_percentual'] ?? 2.00), 2);
+                $jurosPercentual    = round((float) ($parcela['juros_percentual'] ?? 1.00), 2);
                 $naoReceberAposDias = (int)   ($parcela['nao_receber_apos_dias'] ?? 90);
                 // Garantir mínimo de 90 dias conforme instrução da Caixa
                 if ($naoReceberAposDias <= 0) {
