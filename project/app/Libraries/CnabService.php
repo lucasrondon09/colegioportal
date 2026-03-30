@@ -102,8 +102,10 @@ class CnabService
                 throw new Exception('Nenhuma parcela válida encontrada. Verifique se os boletos foram gerados e não foram enviados anteriormente.');
             }
 
-            // Obter próximo número de remessa
-            $numeroRemessa = $this->remessaModel->getProximoNumeroRemessa();
+            // Obter próximo NSA (Número Sequencial de Arquivo) do banco de dados
+            // O NSA é persistido na tabela si_boleto_config e incrementado a cada remessa
+            // conforme exigência da Caixa Econômica Federal
+            $numeroRemessa = $this->obterProximoNsa();
 
             // Criar objeto beneficiário
             $beneficiario = new Pessoa([
@@ -677,6 +679,50 @@ class CnabService
         }
 
         return null;
+    }
+
+    /**
+     * Obter o próximo NSA (Número Sequencial de Arquivo) do banco de dados
+     * e incrementar o valor para a próxima remessa.
+     *
+     * O NSA é armazenado na tabela si_boleto_config no campo nsa_sequencial.
+     * A cada remessa gerada, o valor é incrementado em 1 (operação atômica).
+     * Caso o campo não exista ainda (antes da migration), usa o método antigo
+     * como fallback.
+     *
+     * @return int Próximo NSA a ser utilizado
+     */
+    private function obterProximoNsa(): int
+    {
+        try {
+            // Buscar configuração ativa
+            $config = $this->db->table('si_boleto_config')
+                ->where('ativo', 1)
+                ->get()
+                ->getRowArray();
+
+            // Se o campo nsa_sequencial existe na configuração
+            if ($config && array_key_exists('nsa_sequencial', $config)) {
+                $proximoNsa = (int) $config['nsa_sequencial'] + 1;
+
+                // Incrementar o NSA no banco (operação atômica)
+                $this->db->table('si_boleto_config')
+                    ->where('ativo', 1)
+                    ->update(['nsa_sequencial' => $proximoNsa]);
+
+                log_message('info', "[CNAB REMESSA] NSA gerado: {$proximoNsa} (anterior: {$config['nsa_sequencial']})");
+                return $proximoNsa;
+            }
+
+            // Fallback: campo ainda não existe (migration não rodou)
+            // Usa o método antigo baseado no máximo da tabela de remessas
+            log_message('warning', '[CNAB REMESSA] Campo nsa_sequencial não encontrado em si_boleto_config. Execute a migration. Usando fallback.');
+            return $this->remessaModel->getProximoNumeroRemessa();
+
+        } catch (\Exception $e) {
+            log_message('error', '[CNAB REMESSA] Erro ao obter NSA: ' . $e->getMessage() . '. Usando fallback.');
+            return $this->remessaModel->getProximoNumeroRemessa();
+        }
     }
 
     /**
