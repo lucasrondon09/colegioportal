@@ -205,6 +205,7 @@ class BoletoService
                     'Referente ao período: ' . date('m/Y', strtotime($parcela['data_vencimento'])),
                 ],
                 'instrucoes' => $this->gerarInstrucoes($parcela, $configBoleto, $valorFinal),
+                'localPagamento' => 'EM TODA A REDE BANCÁRIA E SEUS CORRESPONDENTES ATÉ O VALOR LIMITE',
             ]);
 
             // Atualizar parcela no banco com dados do boleto
